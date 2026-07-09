@@ -64,6 +64,11 @@ const highlights = [
   }
 ]
 
+const links = [
+  { label: 'LinkedIn', href: 'https://www.linkedin.com' },
+  { label: 'Email', href: 'mailto:you@example.com' }
+]
+
 const skills = [
   'Business Development',
   'Leadership',
@@ -83,7 +88,7 @@ export default function App() {
           <h1>Ibrahim Musallam</h1>
           <h2 className="intro-title">Business Student / Entrepreneur</h2>
           <p className="intro-role">
-            Founder of Ibrahim'sConciergeUK, Year 12 Business student, mentor, fundraiser, and future business leader.
+            I build practical business experience through entrepreneurship, luxury retail, mentoring, and fundraising.
           </p>
 
           <nav className="side-nav" aria-label="Page sections">
@@ -95,22 +100,24 @@ export default function App() {
         </div>
 
         <div className="intro-footer">
-          <a href="https://www.linkedin.com" aria-label="LinkedIn">LinkedIn</a>
-          <a href="mailto:you@example.com">Email</a>
+          {links.map((link) => (
+            <a href={link.href} key={link.label}>{link.label}</a>
+          ))}
         </div>
       </aside>
 
       <section className="content">
         <section id="about" className="section-block">
+          <h2 className="mobile-section-heading">About</h2>
           <div className="copy">
             <p>
               I am a Year 12 sixth form student at St Aloysius RC College studying a Level 3 National Extended Diploma
               in Business, with a strong interest in entrepreneurship, sales, and business development.
             </p>
             <p>
-              Over the past couple of years, I built and scaled a venture from an initial £250 investment into a
-              five-figure operation. Through this, I developed practical skills in customer behaviour, pricing strategy,
-              profit margins, calculated risk taking, and reinvesting for growth.
+              Over the past couple of years, I built a venture from an initial £250 investment into a five-figure
+              operation, learning customer behaviour, pricing strategy, profit margins, calculated risk taking, and
+              reinvesting for growth.
             </p>
             <p>
               Alongside my studies and business interests, I mentor younger students, have raised over £2,000 for
