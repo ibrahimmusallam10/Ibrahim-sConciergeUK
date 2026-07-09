@@ -45,7 +45,7 @@ const experiences = [
     date: 'Oct 2025 - Present',
     meta: 'Student company programme',
     badge: 'YE',
-    tone: 'teal',
+    tone: 'bronze',
     description:
       'Supporting the organisation and administration of a student run company by coordinating meetings, recording minutes, maintaining clear communication, and contributing to planning, product development, and sales.',
     skills: ['Oversight', 'Administration', 'Teamwork']
