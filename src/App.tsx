@@ -102,7 +102,6 @@ export default function App() {
 
       <section className="content">
         <section id="about" className="section-block">
-          <h2>About</h2>
           <div className="copy">
             <p>
               I am a Year 12 sixth form student at St Aloysius RC College studying a Level 3 National Extended Diploma
