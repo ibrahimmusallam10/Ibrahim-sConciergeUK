@@ -89,7 +89,7 @@ h1 {
   margin-bottom: 0.85rem;
   color: var(--heading);
   font-size: clamp(1rem, 1.55vw, 1.18rem);
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: -0.02em;
   text-transform: none;
 }
