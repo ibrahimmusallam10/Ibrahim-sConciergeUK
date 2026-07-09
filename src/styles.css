@@ -202,6 +202,15 @@ h3 {
   margin-bottom: 0.95rem;
 }
 
+.philosophy-copy {
+  max-width: 34rem;
+}
+
+.philosophy-line {
+  color: var(--heading);
+  font-weight: 600;
+}
+
 .item-list {
   display: grid;
   gap: 0.55rem;

@@ -107,6 +107,7 @@ export default function App() {
 
           <nav className="side-nav" aria-label="Page sections">
             <a href="#about"><span />About</a>
+            <a href="#philosophy"><span />My Philosophy</a>
             <a href="#experience"><span />Experience</a>
             <a href="#initiatives"><span />Initiatives</a>
           </nav>
@@ -158,6 +159,18 @@ export default function App() {
               I’m still at the beginning of my journey, and that’s what excites me most. There is always another skill
               to develop, another person to learn from and another challenge to take on.
             </p>
+          </div>
+        </section>
+
+        <section id="philosophy" className="section-block">
+          <div className="copy philosophy-copy">
+            <p>
+              The goal isn’t simply to build successful businesses—it’s to become the kind of person capable of
+              building them.
+            </p>
+            <p>Everything I do is guided by three principles:</p>
+            <p className="philosophy-line">Build Yourself. Build Relationships. Build Businesses.</p>
+            <p>Because the businesses you build will never outgrow the person you become.</p>
           </div>
         </section>
 
