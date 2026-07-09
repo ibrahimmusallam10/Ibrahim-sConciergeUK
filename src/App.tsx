@@ -67,7 +67,7 @@ const initiatives = [
 const links = [
   {
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com',
+    href: 'https://www.linkedin.com/in/ibrahim-musallam-44045a381',
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="M20.45 20.45h-3.56v-5.58c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.67H9.34V8.98h3.42v1.57h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.29ZM5.32 7.41a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.04H3.54V8.98H7.1v11.47ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z" />
