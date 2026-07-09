@@ -43,7 +43,7 @@ const experiences = [
   }
 ]
 
-const highlights = [
+const initiatives = [
   {
     title: "Ibrahim'sConciergeUK",
     description:
@@ -69,17 +69,6 @@ const links = [
   { label: 'Email', href: 'mailto:you@example.com' }
 ]
 
-const skills = [
-  'Business Development',
-  'Leadership',
-  'Communication',
-  'Mentoring',
-  'Client Relationship Management',
-  'Business Ownership',
-  'Fundraising',
-  'Customer Service'
-]
-
 export default function App() {
   return (
     <main className="site-shell">
@@ -94,8 +83,7 @@ export default function App() {
           <nav className="side-nav" aria-label="Page sections">
             <a href="#about"><span />About</a>
             <a href="#experience"><span />Experience</a>
-            <a href="#highlights"><span />Highlights</a>
-            <a href="#contact"><span />Contact</a>
+            <a href="#initiatives"><span />Initiatives</a>
           </nav>
         </div>
 
@@ -108,7 +96,7 @@ export default function App() {
 
       <section className="content">
         <section id="about" className="section-block">
-          <h2 className="mobile-section-heading">About</h2>
+          <h2>About</h2>
           <div className="copy">
             <p>
               I am a Year 12 sixth form student at St Aloysius RC College studying a Level 3 National Extended Diploma
@@ -147,10 +135,10 @@ export default function App() {
           </div>
         </section>
 
-        <section id="highlights" className="section-block">
-          <h2>Ventures & Highlights</h2>
+        <section id="initiatives" className="section-block">
+          <h2>Initiatives</h2>
           <div className="item-list">
-            {highlights.map((item) => (
+            {initiatives.map((item) => (
               <article className="feature-item" key={item.title}>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
@@ -162,24 +150,6 @@ export default function App() {
               </article>
             ))}
           </div>
-        </section>
-
-        <section className="section-block">
-          <h2>Top Skills</h2>
-          <div className="tag-list skill-list">
-            {skills.map((skill) => (
-              <span key={skill}>{skill}</span>
-            ))}
-          </div>
-        </section>
-
-        <section id="contact" className="section-block contact-block">
-          <h2>Contact</h2>
-          <p>
-            I am open to work experience, mentorship, business conversations, and opportunities connected to
-            entrepreneurship, luxury retail, finance, and business development.
-          </p>
-          <a className="text-link" href="mailto:you@example.com">you@example.com</a>
         </section>
       </section>
     </main>

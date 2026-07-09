@@ -82,7 +82,7 @@ h3 {
 h1 {
   max-width: 430px;
   margin-bottom: 0.6rem;
-  font-size: clamp(2.15rem, 4vw, 3rem);
+  font-size: clamp(2rem, 4vw, 3rem);
 }
 
 .intro-title {
@@ -109,7 +109,7 @@ h3 {
 .intro-role {
   max-width: 360px;
   color: var(--muted);
-  font-size: 0.98rem;
+  font-size: 0.95rem;
 }
 
 .side-nav {
@@ -182,7 +182,8 @@ h3 {
 }
 
 .copy p,
-.contact-block p {
+.resume-item p,
+.feature-item p {
   margin-bottom: 0.95rem;
 }
 
@@ -224,8 +225,7 @@ h3 {
 }
 
 .resume-item p,
-.feature-item p,
-.contact-block p {
+.feature-item p {
   color: var(--muted);
 }
 
@@ -254,18 +254,6 @@ h3 {
   font-weight: 800;
 }
 
-.skill-list {
-  margin-top: 0;
-}
-
-.contact-block {
-  padding-bottom: 4rem;
-}
-
-.mobile-section-heading {
-  display: none;
-}
-
 @media (max-width: 920px) {
   .site-shell {
     display: block;
@@ -290,10 +278,6 @@ h3 {
 
   .content {
     gap: 4.25rem;
-  }
-
-  .mobile-section-heading {
-    display: block;
   }
 }
 
