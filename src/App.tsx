@@ -65,8 +65,24 @@ const initiatives = [
 ]
 
 const links = [
-  { label: 'LinkedIn', href: 'https://www.linkedin.com' },
-  { label: 'ibrahimmusallam10@gmail.com', href: 'mailto:ibrahimmusallam10@gmail.com' }
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com',
+    icon: (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.28 8.25h4.45V24H.28V8.25ZM8.25 8.25h4.27v2.15h.06c.6-1.13 2.05-2.32 4.22-2.32 4.51 0 5.35 2.97 5.35 6.83V24H17.7v-7.99c0-1.91-.03-4.36-2.66-4.36-2.66 0-3.07 2.08-3.07 4.22V24H7.52V8.25h.73Z" />
+      </svg>
+    )
+  },
+  {
+    label: 'Email',
+    href: 'mailto:ibrahimmusallam10@gmail.com',
+    icon: (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M2 5.75A2.75 2.75 0 0 1 4.75 3h14.5A2.75 2.75 0 0 1 22 5.75v12.5A2.75 2.75 0 0 1 19.25 21H4.75A2.75 2.75 0 0 1 2 18.25V5.75Zm2.75-1.25c-.32 0-.61.12-.83.32L12 12.08l8.08-7.26a1.24 1.24 0 0 0-.83-.32H4.75Zm15.75 2.08-5.9 5.31 5.9 5.2V6.58Zm-.94 12.55-6.08-5.36-.65.58a1.25 1.25 0 0 1-1.66 0l-.65-.58-6.08 5.36c.1.02.2.03.31.03h14.5c.11 0 .21-.01.31-.03ZM3.5 17.09l5.9-5.2-5.9-5.31v10.51Z" />
+      </svg>
+    )
+  }
 ]
 
 export default function App() {
@@ -89,7 +105,9 @@ export default function App() {
 
         <div className="intro-footer">
           {links.map((link) => (
-            <a href={link.href} key={link.label}>{link.label}</a>
+            <a href={link.href} key={link.label} aria-label={link.label} title={link.label}>
+              {link.icon}
+            </a>
           ))}
         </div>
       </aside>
