@@ -66,7 +66,7 @@ const initiatives = [
 
 const links = [
   { label: 'LinkedIn', href: 'https://www.linkedin.com' },
-  { label: 'Email', href: 'mailto:you@example.com' }
+  { label: 'ibrahimmusallam10@gmail.com', href: 'mailto:ibrahimmusallam10@gmail.com' }
 ]
 
 export default function App() {
