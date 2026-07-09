@@ -125,18 +125,38 @@ export default function App() {
         <section id="about" className="section-block">
           <div className="copy">
             <p>
-              I am a Year 12 sixth form student at St Aloysius RC College studying a Level 3 National Extended Diploma
-              in Business, with a strong interest in entrepreneurship, sales, and business development.
+              Business has never been just an interest to me, it’s been the lens through which I’ve learned some of
+              life’s biggest lessons.
             </p>
             <p>
-              Over the past couple of years, I built a venture from an initial £250 investment into a five-figure
-              operation, learning customer behaviour, pricing strategy, profit margins, calculated risk taking, and
-              reinvesting for growth.
+              From starting my own business with an initial investment of £250 to growing it into a 5 figure operation,
+              every challenge has taught me something new. Beyond sales and profitability, it’s taught me resilience,
+              communication and the importance of building trust. Those lessons continue to shape how I approach every
+              opportunity, both professionally and personally.
             </p>
             <p>
-              Alongside my studies and business interests, I mentor younger students, have raised over £2,000 for
-              charity, and continue to build relationships with ambitious people across business, retail, finance, and
-              entrepreneurship.
+              I’m naturally curious and enjoy understanding how things work, whether it’s analysing a business model,
+              building systems that improve efficiency, investing, networking or solving simple and complex problems, I
+              find genuine enjoyment in learning and applying new ideas. That curiosity has led me to seek experiences
+              beyond the classroom through entrepreneurship, leadership opportunities, work experience and mentoring.
+            </p>
+            <p>
+              Alongside running Ibrahim’sConciergeUK, I’ve been fortunate to gain experience in retail, media and
+              business. I served as Company Secretary, Human Resourse Manager and a Finance Operational Staff for a
+              London and Essex award winning Young Enterprise company, which then progressed to the UK Finals.
+              Adittionally, I mentor younger students and have raised over £2,000 for charity. Each experience has
+              strengthened my belief that growth comes from taking initiative and putting yourself in environments where
+              you’re constantly learning.
+            </p>
+            <p>
+              Outside of business, I enjoy keeping active through the gym and football, spending time with friends and
+              family, and making the most of every opportunity to experience something new. My faith also plays an
+              important role in my life, shaping my values and reminding me to approach everything with humility,
+              gratitude and integrity.
+            </p>
+            <p>
+              I’m still at the beginning of my journey, and that’s what excites me most. There is always another skill
+              to develop, another person to learn from and another challenge to take on.
             </p>
           </div>
         </section>
