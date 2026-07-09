@@ -75,7 +75,7 @@ export default function App() {
       <aside className="intro" aria-label="Profile introduction">
         <div>
           <h1>Ibrahim Musallam</h1>
-          <h2 className="intro-title">Business Student / Entrepreneur</h2>
+          <h2 className="intro-title">Future Business Leader / Entrepreneur</h2>
           <p className="intro-role">
             I build practical business experience through entrepreneurship, luxury retail, mentoring, and fundraising.
           </p>
@@ -96,7 +96,6 @@ export default function App() {
 
       <section className="content">
         <section id="about" className="section-block">
-          <h2>About</h2>
           <div className="copy">
             <p>
               I am a Year 12 sixth form student at St Aloysius RC College studying a Level 3 National Extended Diploma
@@ -116,7 +115,6 @@ export default function App() {
         </section>
 
         <section id="experience" className="section-block">
-          <h2>Experience</h2>
           <div className="item-list">
             {experiences.map((item) => (
               <article className="resume-item" key={item.title}>
@@ -136,7 +134,6 @@ export default function App() {
         </section>
 
         <section id="initiatives" className="section-block">
-          <h2>Initiatives</h2>
           <div className="item-list">
             {initiatives.map((item) => (
               <article className="feature-item" key={item.title}>
