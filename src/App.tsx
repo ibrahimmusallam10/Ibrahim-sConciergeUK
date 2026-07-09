@@ -80,8 +80,8 @@ export default function App() {
     <main className="site-shell">
       <aside className="intro" aria-label="Profile introduction">
         <div>
-          <p className="kicker">Ibrahim Musallam</p>
-          <h1>Student entrepreneur building practical business experience.</h1>
+          <h1>Ibrahim Musallam</h1>
+          <h2 className="intro-title">Business Student / Entrepreneur</h2>
           <p className="intro-role">
             Founder of Ibrahim'sConciergeUK, Year 12 Business student, mentor, fundraiser, and future business leader.
           </p>
