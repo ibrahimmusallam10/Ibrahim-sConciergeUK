@@ -139,11 +139,13 @@ h3 {
   transition: width 180ms ease, background 180ms ease;
 }
 
-.side-nav a:hover {
+.side-nav a:hover,
+.side-nav a.active {
   color: var(--heading);
 }
 
-.side-nav a:hover span {
+.side-nav a:hover span,
+.side-nav a.active span {
   width: 4rem;
   background: var(--heading);
 }
