@@ -324,37 +324,66 @@ h3 {
   font-weight: 800;
 }
 
-.personal-card-grid {
+.case-study-list {
   display: grid;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
-.personal-card-grid article {
+.case-study {
   display: grid;
-  grid-template-columns: 2.5rem minmax(0, 1fr);
-  padding: 1.15rem;
+  grid-template-columns: minmax(150px, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(1rem, 3vw, 2rem);
+  padding: clamp(1.2rem, 3vw, 1.75rem);
   background: var(--panel-soft);
   border: 1px solid var(--border);
-  border-radius: 0.85rem;
+  border-radius: 0.9rem;
 }
 
-.personal-card-grid h3,
-.personal-card-grid article > p:last-child {
-  grid-column: 2;
+.case-study-heading > p {
+  margin: 0 0 0.65rem;
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
-.personal-card-grid article > p:last-child {
-  margin: 0;
+.case-study-heading h3 {
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  line-height: 1.25;
+}
+
+.case-study-body p {
+  margin: 0 0 1rem;
   color: var(--muted);
 }
 
-.card-number {
-  grid-row: 1 / span 2;
-  margin: 0;
+.case-study-body p:last-child {
+  margin-bottom: 0;
+}
+
+.case-study-body .outcome {
+  padding: 0.8rem 0.9rem;
+  color: var(--heading);
+  background: var(--accent-soft);
+  border-left: 2px solid var(--accent);
+  border-radius: 0 0.45rem 0.45rem 0;
+  font-weight: 600;
+}
+
+.outcome span {
+  display: block;
+  margin-bottom: 0.12rem;
   color: var(--accent);
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.case-study-body .case-lesson {
+  color: var(--heading);
+  font-weight: 600;
 }
 
 .section-eyebrow {
@@ -366,7 +395,7 @@ h3 {
   text-transform: uppercase;
 }
 
-.future-section blockquote {
+.behind-section blockquote {
   margin: 1.75rem 0;
   padding: 0 0 0 1.2rem;
   color: var(--heading);
@@ -554,6 +583,10 @@ h3 {
   .achievement-grid div {
     min-height: 5.5rem;
     padding: 0.8rem;
+  }
+
+  .case-study {
+    grid-template-columns: 1fr;
   }
 
   .contact-section {

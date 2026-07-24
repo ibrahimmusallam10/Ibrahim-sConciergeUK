@@ -101,8 +101,8 @@ const sections = [
   { id: 'about', label: 'About' },
   { id: 'philosophy', label: 'My Philosophy' },
   { id: 'experience', label: 'Experience' },
-  { id: 'beyond', label: 'Beyond Business' },
-  { id: 'future', label: 'Looking Ahead' },
+  { id: 'proof', label: 'Work in Practice' },
+  { id: 'behind', label: 'Behind the Work' },
   { id: 'contact', label: 'Contact' }
 ]
 
@@ -269,53 +269,92 @@ export default function App() {
           </div>
         </section>
 
-        <section id="beyond" className="section-block personal-section">
-          <h2>Beyond Business</h2>
-          <div className="personal-card-grid">
-            <article>
-              <p className="card-number">01</p>
-              <h3>People & Experiences</h3>
-              <p>
-                Outside business, I value time with family and friends, going to the gym, playing football, travelling,
-                and attending networking events. I genuinely enjoy meeting new people and learning from their
-                experiences.
-              </p>
+        <section id="proof" className="section-block proof-section">
+          <p className="section-eyebrow">Selected examples</p>
+          <h2>Work in Practice</h2>
+          <div className="case-study-list">
+            <article className="case-study">
+              <div className="case-study-heading">
+                <p>Client service · Under pressure</p>
+                <h3>Three days. One important deadline.</h3>
+              </div>
+              <div className="case-study-body">
+                <p>
+                  A client needed an item for his wedding within three days. It was unavailable throughout the UK and
+                  Europe, so I widened the search to Dubai, coordinated the international sourcing, and kept the request
+                  moving against a deadline that could not change.
+                </p>
+                <p className="outcome"><span>Outcome</span>The item arrived earlier than the client expected.</p>
+                <p>
+                  It reminded me that concierge work is not simply finding a product. It is staying calm, taking
+                  responsibility, and recognising what the request means to the person trusting you with it.
+                </p>
+              </div>
             </article>
-            <article>
-              <p className="card-number">02</p>
-              <h3>Faith & Values</h3>
-              <p>
-                Faith is the foundation of who I am. It shapes how I make decisions, treat people, and respond to both
-                success and setbacks—with gratitude, integrity, humility, and purpose.
-              </p>
+
+            <article className="case-study">
+              <div className="case-study-heading">
+                <p>Fundraising · Network</p>
+                <h3>Turning relationships into meaningful action.</h3>
+              </div>
+              <div className="case-study-body">
+                <p>
+                  I used the network I had built to raise more than £2,000 for charity. During Ramadan, I then launched
+                  a separate initiative and committed 25% of the profit from every sale to fundraising.
+                </p>
+                <p className="outcome"><span>Outcome</span>The Ramadan initiative generated an additional £900+.</p>
+                <p>
+                  Both experiences showed me that a network has value beyond commercial opportunity. Relationships can
+                  become a way to bring people together around something that matters.
+                </p>
+              </div>
             </article>
-            <article>
-              <p className="card-number">03</p>
-              <h3>Always Improving</h3>
-              <p>
-                I’m working to become more disciplined, patient, and dependable: listening more carefully,
-                communicating clearly, thinking longer-term, and becoming someone others can genuinely rely on.
-              </p>
+
+            <article className="case-study">
+              <div className="case-study-heading">
+                <p>Young Enterprise · UK Finals</p>
+                <h3>Doing what the team needed.</h3>
+              </div>
+              <div className="case-study-body">
+                <p>
+                  Reaching the UK National Finals in Wales required far more than performing one assigned role. I
+                  contributed across website development, market research, supplier sourcing, finance documents,
+                  competition reporting, sales, stock preparation, social content, staff rotas, and internal
+                  communication.
+                </p>
+                <p>
+                  I also took on the work that was less visible: sending reminders, tracking event sales, preparing
+                  envelopes, transporting materials, attending additional planning meetings, and making sure colleagues
+                  had the information they needed.
+                </p>
+                <p className="case-lesson">Reliability often means completing the necessary work whether or not it receives recognition.</p>
+              </div>
             </article>
           </div>
         </section>
 
-        <section id="future" className="section-block future-section">
-          <p className="section-eyebrow">The next chapter</p>
-          <h2>Looking Ahead</h2>
+        <section id="behind" className="section-block behind-section">
+          <p className="section-eyebrow">What people don’t see</p>
+          <h2>Behind the Work</h2>
           <div className="copy">
             <p>
-              Over the next three to five years, I aim to complete a degree apprenticeship, build businesses that
-              create genuine value, grow my network, and put myself in rooms where I can learn from people ahead of me.
-              Long term, I want to build something with a lasting impact on others.
+              Running a concierge business involves much more than successful sales. It means responding at
+              inconvenient times, locating difficult products, managing expectations, solving delivery problems, and
+              accepting personal responsibility when something goes wrong. The time and effort behind that reliability
+              are rarely visible to the client—and that is often the point.
             </p>
             <blockquote>
               Reputation, relationships, and integrity will always be worth more than short-term profit.
             </blockquote>
             <p>
-              I’ve learned this through deals that fell through and mistakes made by trusting the wrong people. Those
-              moments were difficult, but they made me more thoughtful about the opportunities I pursue and the people
-              I choose to build with.
+              I learned that lesson after losing a significant amount of money through an unreliable seller. The
+              experience was difficult, but it changed how I assess risk, verify the people I work with, and balance
+              opportunity with caution. It made me a more thoughtful business owner.
+            </p>
+            <p>
+              Outside business, I reset by spending time with family and friends, going to the gym, playing football,
+              travelling, and meeting new people. My faith remains the foundation of how I make decisions and approach
+              both success and setbacks—with gratitude, integrity, humility, and purpose.
             </p>
           </div>
         </section>
