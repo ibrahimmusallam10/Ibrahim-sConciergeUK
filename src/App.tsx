@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import type { FormEvent } from 'react'
 
 const experiences = [
   {
@@ -100,11 +101,25 @@ const sections = [
   { id: 'about', label: 'About' },
   { id: 'philosophy', label: 'My Philosophy' },
   { id: 'experience', label: 'Experience' },
-  { id: 'initiatives', label: 'Initiatives' }
+  { id: 'initiatives', label: 'Initiatives' },
+  { id: 'contact', label: 'Contact' }
 ]
 
 export default function App() {
   const [activeSection, setActiveSection] = useState(sections[0].id)
+
+  const handleContactSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+
+    const form = new FormData(event.currentTarget)
+    const name = String(form.get('name') || '')
+    const email = String(form.get('email') || '')
+    const message = String(form.get('message') || '')
+    const subject = encodeURIComponent(`Website enquiry from ${name}`)
+    const body = encodeURIComponent(`${message}\n\nFrom: ${name}\nEmail: ${email}`)
+
+    window.location.href = `mailto:ibrahimmusallam10@gmail.com?subject=${subject}&body=${body}`
+  }
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -254,6 +269,34 @@ export default function App() {
               </article>
             ))}
           </div>
+        </section>
+
+        <section id="contact" className="section-block contact-section">
+          <div className="contact-intro">
+            <p className="contact-kicker">Get in touch</p>
+            <h2>Let’s Connect</h2>
+            <p>
+              Have an opportunity, idea, or question? I’m always open to meeting ambitious people and exploring what
+              we could build together.
+            </p>
+            <div className="contact-details">
+              <a href="mailto:ibrahimmusallam10@gmail.com">ibrahimmusallam10@gmail.com</a>
+              <span>London, United Kingdom</span>
+            </div>
+          </div>
+
+          <form className="contact-form" onSubmit={handleContactSubmit}>
+            <label htmlFor="contact-name">Name</label>
+            <input id="contact-name" name="name" type="text" autoComplete="name" required />
+
+            <label htmlFor="contact-email">Email</label>
+            <input id="contact-email" name="email" type="email" autoComplete="email" required />
+
+            <label htmlFor="contact-message">Message</label>
+            <textarea id="contact-message" name="message" rows={5} required />
+
+            <button type="submit">Send message</button>
+          </form>
         </section>
       </section>
     </main>
