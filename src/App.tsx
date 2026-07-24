@@ -101,7 +101,8 @@ const sections = [
   { id: 'about', label: 'About' },
   { id: 'philosophy', label: 'My Philosophy' },
   { id: 'experience', label: 'Experience' },
-  { id: 'initiatives', label: 'Initiatives' },
+  { id: 'beyond', label: 'Beyond Business' },
+  { id: 'future', label: 'Looking Ahead' },
   { id: 'contact', label: 'Contact' }
 ]
 
@@ -155,6 +156,11 @@ export default function App() {
           <p className="intro-role">
             I build practical business experience through entrepreneurship, luxury retail, mentoring, and fundraising.
           </p>
+          <p className="personal-signature" aria-label="Driven, reliable and curious">
+            <span>Driven.</span>
+            <span>Reliable.</span>
+            <span>Curious.</span>
+          </p>
 
           <nav className="side-nav" aria-label="Page sections">
             {sections.map((section) => (
@@ -185,39 +191,31 @@ export default function App() {
           <h2>Who Am I</h2>
           <div className="copy">
             <p>
-              Business has never been just an interest to me, it’s been the lens through which I’ve learned some of
+              Business has never been just an interest to me—it’s been the lens through which I’ve learned some of
               life’s biggest lessons.
             </p>
             <p>
-              From starting my own business with an initial investment of £250 to growing it into a 5 figure operation,
-              every challenge has taught me something new. Beyond sales and profitability, it’s taught me resilience,
-              communication and the importance of building trust. Those lessons continue to shape how I approach every
-              opportunity, both professionally and personally.
+              I started Ibrahim’sConciergeUK with £250 and grew it into a five-figure operation. Beyond sales and
+              profitability, that journey taught me resilience, communication, and the importance of earning trust.
+              Those lessons continue to shape how I approach every opportunity, professionally and personally.
             </p>
             <p>
-              I’m naturally curious and enjoy understanding how things work, whether it’s analysing a business model,
-              building systems that improve efficiency, investing, networking or solving simple and complex problems, I
-              find genuine enjoyment in learning and applying new ideas. That curiosity has led me to seek experiences
-              beyond the classroom through entrepreneurship, leadership opportunities, work experience and mentoring.
+              I’m naturally curious. Whether I’m analysing a business model, improving a system, networking, or solving
+              a problem, I enjoy understanding how things work and putting new ideas into practice. That curiosity has
+              pushed me beyond the classroom and into entrepreneurship, leadership, work experience, and mentoring.
             </p>
             <p>
-              Alongside running Ibrahim’sConciergeUK, I’ve been fortunate to gain experience in retail, media and
-              business. I served as Company Secretary, Human Resourse Manager and a Finance Operational Staff for a
-              London and Essex award winning Young Enterprise company, which then progressed to the UK Finals.
-              Adittionally, I mentor younger students and have raised over £2,000 for charity. Each experience has
-              strengthened my belief that growth comes from taking initiative and putting yourself in environments where
-              you’re constantly learning.
+              I believe success isn’t just about what you achieve—it’s about the person you become while achieving it.
+              I want to leave every conversation having learned something new and every opportunity better than I found
+              it.
             </p>
-            <p>
-              Outside of business, I enjoy keeping active through the gym and football, spending time with friends and
-              family, and making the most of every opportunity to experience something new. My faith also plays an
-              important role in my life, shaping my values and reminding me to approach everything with humility,
-              gratitude and integrity.
-            </p>
-            <p>
-              I’m still at the beginning of my journey, and that’s what excites me most. There is always another skill
-              to develop, another person to learn from and another challenge to take on.
-            </p>
+          </div>
+
+          <div className="achievement-grid" aria-label="Selected achievements">
+            <div><strong>£250</strong><span>Starting investment</span></div>
+            <div><strong>5 figures</strong><span>Business grown</span></div>
+            <div><strong>£2,000+</strong><span>Raised for charity</span></div>
+            <div><strong>UK Finals</strong><span>Young Enterprise</span></div>
           </div>
         </section>
 
@@ -271,13 +269,65 @@ export default function App() {
           </div>
         </section>
 
+        <section id="beyond" className="section-block personal-section">
+          <h2>Beyond Business</h2>
+          <div className="personal-card-grid">
+            <article>
+              <p className="card-number">01</p>
+              <h3>People & Experiences</h3>
+              <p>
+                Outside business, I value time with family and friends, going to the gym, playing football, travelling,
+                and attending networking events. I genuinely enjoy meeting new people and learning from their
+                experiences.
+              </p>
+            </article>
+            <article>
+              <p className="card-number">02</p>
+              <h3>Faith & Values</h3>
+              <p>
+                Faith is the foundation of who I am. It shapes how I make decisions, treat people, and respond to both
+                success and setbacks—with gratitude, integrity, humility, and purpose.
+              </p>
+            </article>
+            <article>
+              <p className="card-number">03</p>
+              <h3>Always Improving</h3>
+              <p>
+                I’m working to become more disciplined, patient, and dependable: listening more carefully,
+                communicating clearly, thinking longer-term, and becoming someone others can genuinely rely on.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="future" className="section-block future-section">
+          <p className="section-eyebrow">The next chapter</p>
+          <h2>Looking Ahead</h2>
+          <div className="copy">
+            <p>
+              Over the next three to five years, I aim to complete a degree apprenticeship, build businesses that
+              create genuine value, grow my network, and put myself in rooms where I can learn from people ahead of me.
+              Long term, I want to build something with a lasting impact on others.
+            </p>
+            <blockquote>
+              Reputation, relationships, and integrity will always be worth more than short-term profit.
+            </blockquote>
+            <p>
+              I’ve learned this through deals that fell through and mistakes made by trusting the wrong people. Those
+              moments were difficult, but they made me more thoughtful about the opportunities I pursue and the people
+              I choose to build with.
+            </p>
+          </div>
+        </section>
+
         <section id="contact" className="section-block contact-section">
           <div className="contact-intro">
             <p className="contact-kicker">Get in touch</p>
             <h2>Let’s Connect</h2>
             <p>
-              Have an opportunity, idea, or question? I’m always open to meeting ambitious people and exploring what
-              we could build together.
+              I’d love to hear from entrepreneurs, founders, business leaders, recruiters, and anyone who enjoys
+              solving problems or creating opportunities. If we could learn from each other or work together, let’s
+              connect.
             </p>
             <div className="contact-details">
               <a href="mailto:ibrahimmusallam10@gmail.com">ibrahimmusallam10@gmail.com</a>
