@@ -101,7 +101,8 @@ const sections = [
   { id: 'about', label: 'About' },
   { id: 'philosophy', label: 'My Philosophy' },
   { id: 'experience', label: 'Experience' },
-  { id: 'initiatives', label: 'Initiatives' },
+  { id: 'proof', label: 'Work in Practice' },
+  { id: 'behind', label: 'Behind the Work' },
   { id: 'contact', label: 'Contact' }
 ]
 
@@ -155,6 +156,11 @@ export default function App() {
           <p className="intro-role">
             I build practical business experience through entrepreneurship, luxury retail, mentoring, and fundraising.
           </p>
+          <p className="personal-signature" aria-label="Driven, reliable and curious">
+            <span>Driven.</span>
+            <span>Reliable.</span>
+            <span>Curious.</span>
+          </p>
 
           <nav className="side-nav" aria-label="Page sections">
             {sections.map((section) => (
@@ -185,39 +191,31 @@ export default function App() {
           <h2>Who Am I</h2>
           <div className="copy">
             <p>
-              Business has never been just an interest to me, it’s been the lens through which I’ve learned some of
+              Business has never been just an interest to me—it’s been the lens through which I’ve learned some of
               life’s biggest lessons.
             </p>
             <p>
-              From starting my own business with an initial investment of £250 to growing it into a 5 figure operation,
-              every challenge has taught me something new. Beyond sales and profitability, it’s taught me resilience,
-              communication and the importance of building trust. Those lessons continue to shape how I approach every
-              opportunity, both professionally and personally.
+              I started Ibrahim’sConciergeUK with £250 and grew it into a five-figure operation. Beyond sales and
+              profitability, that journey taught me resilience, communication, and the importance of earning trust.
+              Those lessons continue to shape how I approach every opportunity, professionally and personally.
             </p>
             <p>
-              I’m naturally curious and enjoy understanding how things work, whether it’s analysing a business model,
-              building systems that improve efficiency, investing, networking or solving simple and complex problems, I
-              find genuine enjoyment in learning and applying new ideas. That curiosity has led me to seek experiences
-              beyond the classroom through entrepreneurship, leadership opportunities, work experience and mentoring.
+              I’m naturally curious. Whether I’m analysing a business model, improving a system, networking, or solving
+              a problem, I enjoy understanding how things work and putting new ideas into practice. That curiosity has
+              pushed me beyond the classroom and into entrepreneurship, leadership, work experience, and mentoring.
             </p>
             <p>
-              Alongside running Ibrahim’sConciergeUK, I’ve been fortunate to gain experience in retail, media and
-              business. I served as Company Secretary, Human Resourse Manager and a Finance Operational Staff for a
-              London and Essex award winning Young Enterprise company, which then progressed to the UK Finals.
-              Adittionally, I mentor younger students and have raised over £2,000 for charity. Each experience has
-              strengthened my belief that growth comes from taking initiative and putting yourself in environments where
-              you’re constantly learning.
+              I believe success isn’t just about what you achieve—it’s about the person you become while achieving it.
+              I want to leave every conversation having learned something new and every opportunity better than I found
+              it.
             </p>
-            <p>
-              Outside of business, I enjoy keeping active through the gym and football, spending time with friends and
-              family, and making the most of every opportunity to experience something new. My faith also plays an
-              important role in my life, shaping my values and reminding me to approach everything with humility,
-              gratitude and integrity.
-            </p>
-            <p>
-              I’m still at the beginning of my journey, and that’s what excites me most. There is always another skill
-              to develop, another person to learn from and another challenge to take on.
-            </p>
+          </div>
+
+          <div className="achievement-grid" aria-label="Selected achievements">
+            <div><strong>£250</strong><span>Starting investment</span></div>
+            <div><strong>5 figures</strong><span>Business grown</span></div>
+            <div><strong>£2,000+</strong><span>Raised for charity</span></div>
+            <div><strong>UK Finals</strong><span>Young Enterprise</span></div>
           </div>
         </section>
 
@@ -271,13 +269,104 @@ export default function App() {
           </div>
         </section>
 
+        <section id="proof" className="section-block proof-section">
+          <p className="section-eyebrow">Selected examples</p>
+          <h2>Work in Practice</h2>
+          <div className="case-study-list">
+            <article className="case-study">
+              <div className="case-study-heading">
+                <p>Client service · Under pressure</p>
+                <h3>Three days. One important deadline.</h3>
+              </div>
+              <div className="case-study-body">
+                <p>
+                  A client needed an item for his wedding within three days. It was unavailable throughout the UK and
+                  Europe, so I widened the search to Dubai, coordinated the international sourcing, and kept the request
+                  moving against a deadline that could not change.
+                </p>
+                <p className="outcome"><span>Outcome</span>The item arrived earlier than the client expected.</p>
+                <p>
+                  It reminded me that concierge work is not simply finding a product. It is staying calm, taking
+                  responsibility, and recognising what the request means to the person trusting you with it.
+                </p>
+              </div>
+            </article>
+
+            <article className="case-study">
+              <div className="case-study-heading">
+                <p>Fundraising · Network</p>
+                <h3>Turning relationships into meaningful action.</h3>
+              </div>
+              <div className="case-study-body">
+                <p>
+                  I used the network I had built to raise more than £2,000 for charity. During Ramadan, I then launched
+                  a separate initiative and committed 25% of the profit from every sale to fundraising.
+                </p>
+                <p className="outcome"><span>Outcome</span>The Ramadan initiative generated an additional £900+.</p>
+                <p>
+                  Both experiences showed me that a network has value beyond commercial opportunity. Relationships can
+                  become a way to bring people together around something that matters.
+                </p>
+              </div>
+            </article>
+
+            <article className="case-study">
+              <div className="case-study-heading">
+                <p>Young Enterprise · UK Finals</p>
+                <h3>Doing what the team needed.</h3>
+              </div>
+              <div className="case-study-body">
+                <p>
+                  Reaching the UK National Finals in Wales required far more than performing one assigned role. I
+                  contributed across website development, market research, supplier sourcing, finance documents,
+                  competition reporting, sales, stock preparation, social content, staff rotas, and internal
+                  communication.
+                </p>
+                <p>
+                  I also took on the work that was less visible: sending reminders, tracking event sales, preparing
+                  envelopes, transporting materials, attending additional planning meetings, and making sure colleagues
+                  had the information they needed.
+                </p>
+                <p className="case-lesson">Reliability often means completing the necessary work whether or not it receives recognition.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="behind" className="section-block behind-section">
+          <p className="section-eyebrow">What people don’t see</p>
+          <h2>Behind the Work</h2>
+          <div className="copy">
+            <p>
+              Running a concierge business involves much more than successful sales. It means responding at
+              inconvenient times, locating difficult products, managing expectations, solving delivery problems, and
+              accepting personal responsibility when something goes wrong. The time and effort behind that reliability
+              are rarely visible to the client—and that is often the point.
+            </p>
+            <blockquote>
+              Reputation, relationships, and integrity will always be worth more than short-term profit.
+            </blockquote>
+            <p>
+              I learned that lesson after losing a significant amount of money through an unreliable seller. The
+              experience was difficult, but it changed how I assess risk, verify the people I work with, and balance
+              opportunity with caution. It made me a more thoughtful business owner.
+            </p>
+            <p>
+              Outside business, I reset by spending time with family and friends, going to the gym, playing football,
+              travelling, and meeting new people. My faith remains the foundation of how I make decisions and approach
+              both success and setbacks—with gratitude, integrity, humility, and purpose.
+            </p>
+          </div>
+        </section>
+
         <section id="contact" className="section-block contact-section">
           <div className="contact-intro">
             <p className="contact-kicker">Get in touch</p>
             <h2>Let’s Connect</h2>
             <p>
-              Have an opportunity, idea, or question? I’m always open to meeting ambitious people and exploring what
-              we could build together.
+              I’d love to hear from entrepreneurs, founders, business leaders, recruiters, and anyone who enjoys
+              solving problems or creating opportunities. If we could learn from each other or work together, let’s
+              connect.
             </p>
             <div className="contact-details">
               <a href="mailto:ibrahimmusallam10@gmail.com">ibrahimmusallam10@gmail.com</a>

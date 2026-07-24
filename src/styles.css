@@ -109,6 +109,24 @@ h3 {
   font-size: 0.95rem;
 }
 
+.personal-signature {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 1.25rem 0 0;
+}
+
+.personal-signature span {
+  padding: 0.26rem 0.6rem;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid rgba(94, 234, 212, 0.1);
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
 .side-nav {
   display: grid;
   gap: 0.9rem;
@@ -211,6 +229,34 @@ h3 {
   font-weight: 600;
 }
 
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin-top: 1.75rem;
+}
+
+.achievement-grid div {
+  display: grid;
+  gap: 0.15rem;
+  min-height: 6rem;
+  padding: 1rem;
+  background: var(--panel-soft);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+}
+
+.achievement-grid strong {
+  color: var(--heading);
+  font-size: 1.25rem;
+  letter-spacing: -0.035em;
+}
+
+.achievement-grid span {
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+
 .item-list {
   display: grid;
   gap: 0.55rem;
@@ -276,6 +322,88 @@ h3 {
   border-radius: 999px;
   font-size: 0.74rem;
   font-weight: 800;
+}
+
+.case-study-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.case-study {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(1rem, 3vw, 2rem);
+  padding: clamp(1.2rem, 3vw, 1.75rem);
+  background: var(--panel-soft);
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+}
+
+.case-study-heading > p {
+  margin: 0 0 0.65rem;
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.case-study-heading h3 {
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  line-height: 1.25;
+}
+
+.case-study-body p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+
+.case-study-body p:last-child {
+  margin-bottom: 0;
+}
+
+.case-study-body .outcome {
+  padding: 0.8rem 0.9rem;
+  color: var(--heading);
+  background: var(--accent-soft);
+  border-left: 2px solid var(--accent);
+  border-radius: 0 0.45rem 0.45rem 0;
+  font-weight: 600;
+}
+
+.outcome span {
+  display: block;
+  margin-bottom: 0.12rem;
+  color: var(--accent);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.case-study-body .case-lesson {
+  color: var(--heading);
+  font-weight: 600;
+}
+
+.section-eyebrow {
+  margin: 0 0 0.55rem;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.behind-section blockquote {
+  margin: 1.75rem 0;
+  padding: 0 0 0 1.2rem;
+  color: var(--heading);
+  border-left: 2px solid var(--accent);
+  font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: -0.025em;
 }
 
 .contact-section {
@@ -446,6 +574,19 @@ h3 {
 
   .feature-item {
     padding: 0;
+  }
+
+  .achievement-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .achievement-grid div {
+    min-height: 5.5rem;
+    padding: 0.8rem;
+  }
+
+  .case-study {
+    grid-template-columns: 1fr;
   }
 
   .contact-section {
