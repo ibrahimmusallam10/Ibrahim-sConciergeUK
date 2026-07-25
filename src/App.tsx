@@ -184,39 +184,48 @@ export default function App() {
         <section id="about" className="section-block">
           <h2>Who Am I</h2>
           <div className="copy">
+            <p className="about-lead">Hi, I’m Ibrahim.</p>
             <p>
-              Business has never been just an interest to me, it’s been the lens through which I’ve learned some of
-              life’s biggest lessons.
+              I’m someone who loves building things, solving problems and constantly learning.
             </p>
             <p>
-              From starting my own business with an initial investment of £250 to growing it into a 5 figure operation,
-              every challenge has taught me something new. Beyond sales and profitability, it’s taught me resilience,
-              communication and the importance of building trust. Those lessons continue to shape how I approach every
-              opportunity, both professionally and personally.
+              Business has never been just an interest to me. It’s how I’ve learnt many of life’s biggest lessons. I
+              started Ibrahim’sConciergeUK with an initial investment of just £250. Since then, I’ve grown it into a 5
+              figure business, but the biggest rewards haven’t been financial. The journey has taught me resilience,
+              adaptability and the importance of trust.
             </p>
             <p>
-              I’m naturally curious and enjoy understanding how things work, whether it’s analysing a business model,
-              building systems that improve efficiency, investing, networking or solving simple and complex problems, I
-              find genuine enjoyment in learning and applying new ideas. That curiosity has led me to seek experiences
-              beyond the classroom through entrepreneurship, leadership opportunities, work experience and mentoring.
+              I’m naturally curious and enjoy understanding how things work. Whether it’s analysing business models,
+              improving processes, exploring new technologies, investing, networking or tackling complex problems, I
+              enjoy learning and applying new ideas. That curiosity has pushed me to look beyond the classroom and
+              actively seek opportunities that help me grow.
             </p>
             <p>
-              Alongside running Ibrahim’sConciergeUK, I’ve been fortunate to gain experience in retail, media and
-              business. I served as Company Secretary, Human Resourse Manager and a Finance Operational Staff for a
-              London and Essex award winning Young Enterprise company, which then progressed to the UK Finals.
-              Adittionally, I mentor younger students and have raised over £2,000 for charity. Each experience has
-              strengthened my belief that growth comes from taking initiative and putting yourself in environments where
-              you’re constantly learning.
+              Alongside running my business, I’ve gained experience across retail, operations and business through work
+              experience, internships and leadership roles. I’ve worked alongside professionals in operations, sales,
+              engineering and marketing, represented an award winning Young Enterprise company that reached the UK
+              Finals, mentored younger students and helped raise over £2,000 for charity. Every experience has
+              strengthened my belief that growth comes from taking initiative and putting yourself in environments
+              where you’re constantly learning.
             </p>
             <p>
-              Outside of business, I enjoy keeping active through the gym and football, spending time with friends and
-              family, and making the most of every opportunity to experience something new. My faith also plays an
-              important role in my life, shaping my values and reminding me to approach everything with humility,
-              gratitude and integrity.
+              Outside of business, I enjoy staying active by going to the gym and playing football, spending time with
+              friends and family, and attending networking events. These events allow me to connect with ambitious
+              people, hear different perspectives and continue learning from their experiences.
             </p>
             <p>
-              I’m still at the beginning of my journey, and that’s what excites me most. There is always another skill
-              to develop, another person to learn from and another challenge to take on.
+              Being a Muslim is a central part of who I am. My faith shapes my values, guides my decisions and reminds
+              me to approach every opportunity with gratitude, purpose and sincerity.
+            </p>
+            <p>
+              At the end of the day, I don’t want to be known only for what I’ve achieved, but also for the person I’ve
+              become along the way. I want to continue learning, help others and leave every opportunity better than I
+              found it.
+            </p>
+            <p>
+              The more I learn, the more I realise how much there is still to learn. That’s what motivates me. There
+              will always be another challenge to embrace, another skill to develop and another person to learn from. My
+              goal is to keep growing, keep building and make a meaningful impact wherever I can.
             </p>
           </div>
         </section>

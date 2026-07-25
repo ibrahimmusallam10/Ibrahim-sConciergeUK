@@ -196,6 +196,14 @@ h3 {
   font-size: 0.98rem;
 }
 
+.copy .about-lead {
+  margin-bottom: 0.65rem;
+  color: var(--heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
 .copy p,
 .resume-item p,
 .feature-item p {
