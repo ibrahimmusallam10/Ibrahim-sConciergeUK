@@ -237,7 +237,11 @@ export default function App() {
               person behind them.
             </p>
             <p>That’s why I try to live by three simple principles:</p>
-            <p className="philosophy-line">Build Yourself. Build Relationships. Build Businesses.</p>
+            <p className="philosophy-line">
+              <span>Build Yourself</span>
+              <span>Build Relationships</span>
+              <span>Build Businesses</span>
+            </p>
             <p>
               I believe investing in yourself is the foundation of everything else. Every challenge teaches you
               something, every conversation offers a new perspective and every relationship has the potential to create
@@ -291,10 +295,10 @@ export default function App() {
         <section id="contact" className="section-block contact-section">
           <div className="contact-intro">
             <p className="contact-kicker">Get in touch</p>
-            <h2>Let’s Connect</h2>
+            <h2>Build Something Together</h2>
             <p>
-              Have an opportunity, idea, or question? I’m always open to meeting ambitious people and exploring what
-              we could build together.
+              The best opportunities often begin with a conversation. If you have an idea, opportunity or challenge
+              worth exploring, let’s discuss what we could build together.
             </p>
             <div className="contact-details">
               <a href="mailto:ibrahimmusallam10@gmail.com">ibrahimmusallam10@gmail.com</a>
@@ -312,7 +316,7 @@ export default function App() {
             <label htmlFor="contact-message">Message</label>
             <textarea id="contact-message" name="message" rows={5} required />
 
-            <button type="submit">Send message</button>
+            <button type="submit">Start a Conversation</button>
           </form>
         </section>
       </section>
