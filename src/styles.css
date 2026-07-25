@@ -295,7 +295,7 @@ h3 {
 
 .contact-intro h2 {
   margin-bottom: 1rem;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.45rem, 3vw, 2.1rem);
   letter-spacing: -0.055em;
   text-transform: none;
 }
