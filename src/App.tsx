@@ -184,9 +184,8 @@ export default function App() {
         <section id="about" className="section-block">
           <h2>Who Am I</h2>
           <div className="copy">
-            <p className="about-lead">Hi, I’m Ibrahim.</p>
             <p>
-              I’m someone who loves building things, solving problems and constantly learning.
+              Hi, I’m Ibrahim. I’m someone who loves building things, solving problems and constantly learning.
             </p>
             <p>
               Business has never been just an interest to me. It’s how I’ve learnt many of life’s biggest lessons. I
