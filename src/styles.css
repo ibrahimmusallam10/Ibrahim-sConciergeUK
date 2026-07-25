@@ -284,13 +284,13 @@ h3 {
 
 .contact-section {
   display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(280px, 1.2fr);
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 360px);
   gap: clamp(1.5rem, 4vw, 3rem);
   align-items: center;
-  width: calc(100% + 3rem);
-  min-height: 34rem;
-  margin-left: -1.5rem;
-  padding: clamp(2rem, 4vw, 3rem);
+  width: calc(100% + 2rem);
+  min-height: 28rem;
+  margin-left: -1rem;
+  padding: clamp(1.75rem, 3.5vw, 2.5rem);
   background: rgba(17, 34, 64, 0.55);
   border: 1px solid var(--border);
   border-radius: 1.25rem;
@@ -337,7 +337,10 @@ h3 {
 
 .contact-form {
   display: grid;
-  padding: clamp(1.25rem, 3vw, 2rem);
+  justify-self: end;
+  width: 100%;
+  max-width: 360px;
+  padding: 1.4rem;
   color: #0f2c2a;
   background: #f8fafc;
   border-radius: 1rem;
@@ -474,6 +477,8 @@ h3 {
   }
 
   .contact-form {
+    justify-self: stretch;
+    max-width: none;
     padding: 1.25rem;
   }
 }

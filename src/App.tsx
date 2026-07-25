@@ -314,7 +314,7 @@ export default function App() {
             <input id="contact-email" name="email" type="email" autoComplete="email" required />
 
             <label htmlFor="contact-message">Message</label>
-            <textarea id="contact-message" name="message" rows={5} required />
+            <textarea id="contact-message" name="message" rows={4} required />
 
             <button type="submit">Start a Conversation</button>
           </form>
