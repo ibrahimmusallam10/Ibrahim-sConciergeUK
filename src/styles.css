@@ -220,8 +220,12 @@ h3 {
 }
 
 .philosophy-line {
+  display: grid;
+  gap: 0.15rem;
   color: var(--heading);
-  font-weight: 600;
+  font-weight: 800;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
 }
 
 .item-list {

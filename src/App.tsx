@@ -237,7 +237,11 @@ export default function App() {
               person behind them.
             </p>
             <p>That’s why I try to live by three simple principles:</p>
-            <p className="philosophy-line">Build Yourself. Build Relationships. Build Businesses.</p>
+            <p className="philosophy-line">
+              <span>Build Yourself</span>
+              <span>Build Relationships</span>
+              <span>Build Businesses</span>
+            </p>
             <p>
               I believe investing in yourself is the foundation of everything else. Every challenge teaches you
               something, every conversation offers a new perspective and every relationship has the potential to create
