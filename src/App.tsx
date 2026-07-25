@@ -233,12 +233,21 @@ export default function App() {
           <h2>My Philosophy</h2>
           <div className="copy philosophy-copy">
             <p>
-              The goal isn’t simply to build successful businesses, it’s to become the kind of person capable of
-              building them.
+              I’ve come to realise that successful businesses are not where everything begins. They begin with the
+              person behind them.
             </p>
-            <p>Everything I do is guided by three principles:</p>
+            <p>That’s why I try to live by three simple principles:</p>
             <p className="philosophy-line">Build Yourself. Build Relationships. Build Businesses.</p>
-            <p>Because the businesses you build will never outgrow the person you become.</p>
+            <p>
+              I believe investing in yourself is the foundation of everything else. Every challenge teaches you
+              something, every conversation offers a new perspective and every relationship has the potential to create
+              opportunities you may never find alone.
+            </p>
+            <p>
+              To me, success isn’t just about what you build. It’s about the trust you earn, the value you create and
+              the way you treat people throughout the journey. The businesses you build may open doors, but your
+              character determines how long they remain open.
+            </p>
           </div>
         </section>
 
