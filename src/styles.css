@@ -287,7 +287,10 @@ h3 {
   grid-template-columns: minmax(0, 0.8fr) minmax(280px, 1.2fr);
   gap: clamp(1.5rem, 4vw, 3rem);
   align-items: center;
-  padding: clamp(1.25rem, 3vw, 2rem);
+  width: calc(100% + 3rem);
+  min-height: 34rem;
+  margin-left: -1.5rem;
+  padding: clamp(2rem, 4vw, 3rem);
   background: rgba(17, 34, 64, 0.55);
   border: 1px solid var(--border);
   border-radius: 1.25rem;
@@ -295,9 +298,11 @@ h3 {
 
 .contact-intro h2 {
   margin-bottom: 1rem;
-  font-size: clamp(1.45rem, 3vw, 2.1rem);
-  letter-spacing: -0.055em;
+  font-size: clamp(1.25rem, 2.2vw, 1.7rem);
+  font-weight: 600;
+  letter-spacing: -0.035em;
   text-transform: none;
+  white-space: nowrap;
 }
 
 .contact-intro > p:not(.contact-kicker) {
@@ -418,6 +423,8 @@ h3 {
 
   .contact-section {
     grid-template-columns: minmax(0, 0.8fr) minmax(280px, 1.2fr);
+    width: 100%;
+    margin-left: 0;
   }
 }
 
@@ -454,7 +461,12 @@ h3 {
 
   .contact-section {
     grid-template-columns: 1fr;
+    min-height: 0;
     padding: 1rem;
+  }
+
+  .contact-intro h2 {
+    white-space: normal;
   }
 
   .contact-intro {
