@@ -183,12 +183,25 @@ h3 {
 
 .content {
   display: grid;
-  gap: 4.5rem;
+  gap: 2.75rem;
   padding-top: 0.2rem;
 }
 
 .section-block {
   scroll-margin-top: 5rem;
+}
+
+/* On desktop, the sticky navigation carries the section titles. */
+.section-block > h2 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .copy {
@@ -409,7 +422,18 @@ h3 {
   }
 
   .content {
-    gap: 4.25rem;
+    gap: 3.25rem;
+  }
+
+  /* Section titles return when the side navigation is hidden. */
+  .section-block > h2 {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0 0 1.2rem;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
   }
 
   .contact-section {
