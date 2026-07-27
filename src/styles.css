@@ -284,28 +284,29 @@ h3 {
 
 .contact-section {
   display: grid;
-  grid-template-columns: minmax(350px, 1fr) minmax(250px, 290px);
-  gap: clamp(1.5rem, 2.5vw, 2rem);
-  align-items: center;
-  width: calc(100% + 8rem);
-  margin-left: -4rem;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  align-items: start;
+  width: calc(100% + 4rem);
+  margin-left: -2rem;
   padding: clamp(1.75rem, 3vw, 2.25rem);
-  background: #15213a;
+  background: rgba(17, 34, 64, 0.55);
   border: 1px solid var(--border);
   border-radius: 1.25rem;
 }
 
 .contact-intro {
-  display: block;
-  grid-column: 1;
+  display: contents;
 }
 
 .contact-heading {
-  margin-bottom: 1.6rem;
+  grid-column: 1;
 }
 
 .contact-copy {
-  max-width: 36rem;
+  grid-column: 1;
+  align-self: start;
+  max-width: 44rem;
 }
 
 .contact-intro h2 {
@@ -349,25 +350,24 @@ h3 {
 
 .contact-form {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-areas:
-    "name-label"
-    "name-input"
-    "email-label"
-    "email-input"
-    "message-label"
-    "message-input"
-    "action";
+    "name-label email-label"
+    "name-input email-input"
+    "message-label message-label"
+    "message-input message-input"
+    "action action";
+  column-gap: 1.5rem;
   row-gap: 0.2rem;
-  grid-column: 2;
-  grid-row: 1;
-  align-self: center;
-  justify-self: end;
+  grid-column: 1;
+  grid-row: auto;
+  align-self: start;
+  justify-self: stretch;
   width: 100%;
-  max-width: 300px;
+  max-width: none;
   padding: 1.3rem;
   color: var(--text);
-  background: #101a2e;
+  background: #17233b;
   border: 1px solid rgba(148, 163, 184, 0.18);
   border-radius: 0.85rem;
   box-shadow: 0 1.25rem 3rem rgba(2, 6, 23, 0.2);
@@ -427,8 +427,8 @@ h3 {
 
 .contact-form button {
   grid-area: action;
-  justify-self: stretch;
-  width: 100%;
+  justify-self: end;
+  width: min(13rem, 100%);
   min-height: 2.45rem;
   padding: 0.55rem 0.9rem;
   color: #08352f;
@@ -479,7 +479,7 @@ h3 {
   }
 
   .contact-section {
-    grid-template-columns: minmax(0, 1fr) minmax(250px, 285px);
+    grid-template-columns: 1fr;
     width: 100%;
     margin-left: 0;
   }
