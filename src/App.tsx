@@ -293,18 +293,20 @@ export default function App() {
         </section>
 
         <section id="contact" className="section-block contact-section">
-          <div className="contact-heading">
-            <p className="contact-kicker">Get in touch</p>
-            <h2>Let’s Build Something Meaningful.</h2>
-          </div>
-          <div className="contact-copy">
-            <p>
-              The best opportunities rarely begin with a contract — they begin with a conversation. If you have an
-              idea, challenge or you simply want to connect, I would love to hear from you.
-            </p>
-            <div className="contact-details">
-              <a href="mailto:ibrahimmusallam10@gmail.com">ibrahimmusallam10@gmail.com</a>
-              <span>London, United Kingdom</span>
+          <div className="contact-intro">
+            <div className="contact-heading">
+              <p className="contact-kicker">Get in touch</p>
+              <h2>Let’s Build Something Meaningful.</h2>
+            </div>
+            <div className="contact-copy">
+              <p>
+                The best opportunities rarely begin with a contract — they begin with a conversation. If you have an
+                idea, challenge or you simply want to connect, I would love to hear from you.
+              </p>
+              <div className="contact-details">
+                <a href="mailto:ibrahimmusallam10@gmail.com">ibrahimmusallam10@gmail.com</a>
+                <span>London, United Kingdom</span>
+              </div>
             </div>
           </div>
 
