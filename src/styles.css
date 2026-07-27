@@ -285,8 +285,7 @@ h3 {
 .contact-section {
   display: grid;
   grid-template-columns: minmax(300px, 1fr) minmax(240px, 285px);
-  column-gap: clamp(1.5rem, 3vw, 2.25rem);
-  row-gap: 0.9rem;
+  gap: clamp(1.5rem, 3vw, 2.25rem);
   align-items: center;
   width: calc(100% + 4rem);
   min-height: 25rem;
@@ -307,11 +306,11 @@ h3 {
 
 .contact-copy {
   grid-column: 1;
-  align-self: start;
+  align-self: center;
 }
 
 .contact-intro h2 {
-  margin-bottom: 0;
+  margin-bottom: 1rem;
   font-size: clamp(1.4rem, 2.2vw, 1.58rem);
   font-weight: 700;
   letter-spacing: -0.05em;
