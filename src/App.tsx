@@ -296,7 +296,11 @@ export default function App() {
           <div className="contact-intro">
             <div className="contact-heading">
               <p className="contact-kicker">Get in touch</p>
-              <h2>Let’s Build Something Meaningful.</h2>
+              <h2>
+                Let’s Build Something
+                <br />
+                Meaningful.
+              </h2>
             </div>
             <div className="contact-copy">
               <p>

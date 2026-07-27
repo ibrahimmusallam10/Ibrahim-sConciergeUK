@@ -1,13 +1,13 @@
 :root {
-  --bg: #0f172a;
-  --panel: #112240;
-  --panel-soft: rgba(30, 41, 59, 0.42);
-  --text: #e2e8f0;
-  --heading: #f8fafc;
-  --muted: #94a3b8;
+  --bg: #061123;
+  --panel: #0c1b34;
+  --panel-soft: rgba(18, 35, 61, 0.62);
+  --text: #dbe4f0;
+  --heading: #f7f9fc;
+  --muted: #9cabc1;
   --accent: #5eead4;
   --accent-soft: rgba(94, 234, 212, 0.12);
-  --border: rgba(148, 163, 184, 0.14);
+  --border: rgba(92, 126, 172, 0.26);
 }
 
 * {
@@ -22,7 +22,9 @@ body {
   margin: 0;
   min-height: 100vh;
   color: var(--text);
-  background: var(--bg);
+  background:
+    radial-gradient(circle at 10% 4%, rgba(25, 58, 99, 0.38), transparent 36rem),
+    var(--bg);
   font-family: Inter, "Segoe UI", Arial, sans-serif;
   font-size: 15px;
   line-height: 1.6;
@@ -290,8 +292,8 @@ h3 {
   width: calc(100% + 8rem);
   margin-left: -4rem;
   padding: clamp(1.75rem, 3vw, 2.25rem);
-  background: #15213a;
-  border: 1px solid var(--border);
+  background: #0c1b34;
+  border: 1px solid rgba(67, 103, 151, 0.58);
   border-radius: 1.25rem;
 }
 
@@ -324,7 +326,7 @@ h3 {
 
 .contact-kicker {
   margin: 0 0 0.55rem;
-  color: #f4c76b;
+  color: #f3c75f;
   font-size: 0.64rem;
   font-weight: 800;
   letter-spacing: 0.23em;
@@ -367,8 +369,8 @@ h3 {
   max-width: 300px;
   padding: 1.3rem;
   color: var(--text);
-  background: #101a2e;
-  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: #08162a;
+  border: 1px solid rgba(67, 103, 151, 0.62);
   border-radius: 0.85rem;
   box-shadow: 0 1.25rem 3rem rgba(2, 6, 23, 0.2);
 }
@@ -432,7 +434,7 @@ h3 {
   min-height: 2.45rem;
   padding: 0.55rem 0.9rem;
   color: #08352f;
-  background: var(--accent);
+  background: linear-gradient(90deg, #32c7a5, #5de0d2);
   border: 0;
   border-radius: 999px;
   font: inherit;
