@@ -294,15 +294,19 @@ export default function App() {
 
         <section id="contact" className="section-block contact-section">
           <div className="contact-intro">
-            <p className="contact-kicker">Get in touch</p>
-            <h2>Build Something Together</h2>
-            <p>
-              The best opportunities often begin with a conversation. If you have an idea, opportunity or challenge
-              worth exploring, let’s discuss what we could build together.
-            </p>
-            <div className="contact-details">
-              <a href="mailto:ibrahimmusallam10@gmail.com">ibrahimmusallam10@gmail.com</a>
-              <span>London, United Kingdom</span>
+            <div className="contact-heading">
+              <p className="contact-kicker">Get in touch</p>
+              <h2>Let’s Build Something Meaningful.</h2>
+            </div>
+            <div className="contact-copy">
+              <p>
+                The best opportunities rarely begin with a contract — they begin with a conversation. If you have an
+                idea, challenge or you simply want to connect, I would love to hear from you.
+              </p>
+              <div className="contact-details">
+                <a href="mailto:ibrahimmusallam10@gmail.com">ibrahimmusallam10@gmail.com</a>
+                <span>London, United Kingdom</span>
+              </div>
             </div>
           </div>
 
@@ -316,7 +320,7 @@ export default function App() {
             <label htmlFor="contact-message">Message</label>
             <textarea id="contact-message" name="message" rows={3} required />
 
-            <button type="submit">Start a Conversation</button>
+            <button type="submit">Let’s Talk</button>
           </form>
         </section>
       </section>
