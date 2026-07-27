@@ -284,13 +284,12 @@ h3 {
 
 .contact-section {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(300px, 360px);
-  gap: clamp(3rem, 5vw, 4rem);
+  grid-template-columns: minmax(330px, 1fr) minmax(250px, 300px);
+  gap: clamp(2.5rem, 4vw, 3.25rem);
   align-items: center;
-  width: min(900px, calc(100% + 12rem));
-  min-height: 34rem;
-  margin-left: -6rem;
-  padding: clamp(2.5rem, 4vw, 3.25rem);
+  width: calc(100% + 8rem);
+  margin-left: -4rem;
+  padding: clamp(1.75rem, 3vw, 2.25rem);
   background: #0c1b34;
   border: 1px solid rgba(67, 103, 151, 0.58);
   border-radius: 1.25rem;
@@ -302,16 +301,16 @@ h3 {
 }
 
 .contact-heading {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .contact-copy {
-  max-width: 42rem;
+  max-width: 36rem;
 }
 
 .contact-intro h2 {
-  margin-bottom: 1.35rem;
-  font-size: clamp(1.8rem, 2.75vw, 2rem);
+  margin-bottom: 1.15rem;
+  font-size: clamp(1.5rem, 2.35vw, 1.7rem);
   font-weight: 700;
   letter-spacing: -0.05em;
   text-transform: none;
@@ -319,7 +318,7 @@ h3 {
 }
 
 .contact-copy > p {
-  margin-bottom: 2.4rem;
+  margin-bottom: 2rem;
   color: var(--muted);
 }
 
@@ -359,14 +358,14 @@ h3 {
     "message-label"
     "message-input"
     "action";
-  row-gap: 0.5rem;
+  row-gap: 0.35rem;
   grid-column: 2;
   grid-row: 1;
   align-self: center;
   justify-self: end;
   width: 100%;
-  max-width: 360px;
-  padding: 2rem;
+  max-width: 300px;
+  padding: 1.55rem;
   color: var(--text);
   background: #071428;
   border: 1px solid rgba(83, 116, 160, 0.5);
@@ -399,17 +398,17 @@ h3 {
 }
 
 .contact-form label {
-  margin-bottom: 0.4rem;
-  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+  font-size: 0.75rem;
   font-weight: 800;
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  min-height: 4rem;
-  margin-bottom: 1.5rem;
-  padding: 0.9rem 0.15rem;
+  min-height: 3.25rem;
+  margin-bottom: 1.2rem;
+  padding: 0.75rem 0.1rem;
   color: var(--heading);
   background: transparent;
   border: 0;
@@ -422,7 +421,7 @@ h3 {
 }
 
 .contact-form textarea {
-  min-height: 10rem;
+  min-height: 8.5rem;
 }
 
 .contact-form input:focus,
@@ -435,14 +434,14 @@ h3 {
   grid-area: action;
   justify-self: stretch;
   width: 100%;
-  min-height: 3.4rem;
-  padding: 0.85rem 1.15rem;
+  min-height: 3.05rem;
+  padding: 0.72rem 1rem;
   color: #ffffff;
   background: var(--accent);
   border: 0;
   border-radius: 999px;
   font: inherit;
-  font-size: 1rem;
+  font-size: 0.92rem;
   font-weight: 700;
   cursor: pointer;
   box-shadow: 0 0.5rem 1.25rem rgba(94, 234, 212, 0.12);
