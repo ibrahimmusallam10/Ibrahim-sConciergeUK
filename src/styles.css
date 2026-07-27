@@ -1,10 +1,10 @@
 :root {
-  --bg: #0f172a;
-  --panel: #112240;
-  --panel-soft: rgba(30, 41, 59, 0.42);
-  --text: #e2e8f0;
-  --heading: #f8fafc;
-  --muted: #94a3b8;
+  --bg: #061123;
+  --panel: #0c1b34;
+  --panel-soft: rgba(18, 35, 61, 0.62);
+  --text: #dbe4f0;
+  --heading: #f7f9fc;
+  --muted: #9cabc1;
   --accent: #5eead4;
   --accent-soft: rgba(94, 234, 212, 0.12);
   --border: rgba(92, 126, 172, 0.26);
@@ -40,9 +40,9 @@ body::before {
   inset: 0;
   pointer-events: none;
   background: radial-gradient(
-    37.5rem circle at var(--cursor-x) var(--cursor-y),
-    rgba(29, 78, 216, 0.15),
-    transparent 80%
+    30rem circle at var(--cursor-x) var(--cursor-y),
+    rgba(94, 234, 212, 0.1),
+    transparent 62%
   );
   opacity: var(--cursor-glow-opacity);
   transition: opacity 220ms ease;
@@ -58,7 +58,7 @@ a {
   display: grid;
   grid-template-columns: minmax(280px, 0.82fr) minmax(0, 1.18fr);
   gap: clamp(2rem, 7vw, 6rem);
-  width: min(1200px, calc(100% - 3rem));
+  width: min(1120px, calc(100% - 3rem));
   min-height: 100vh;
   margin: 0 auto;
   padding: clamp(3rem, 7vw, 5.5rem) 0;
@@ -105,16 +105,16 @@ h3 {
 }
 
 h1 {
-  max-width: 520px;
+  max-width: 430px;
   margin-bottom: 0.6rem;
-  font-size: clamp(2.75rem, 5vw, 4rem);
+  font-size: clamp(2rem, 4vw, 3rem);
 }
 
 .intro-title {
   margin-bottom: 0.85rem;
   color: var(--heading);
-  font-size: clamp(1.15rem, 1.8vw, 1.4rem);
-  font-weight: 500;
+  font-size: clamp(1rem, 1.55vw, 1.18rem);
+  font-weight: 400;
   letter-spacing: -0.02em;
   text-transform: none;
 }
@@ -132,9 +132,9 @@ h3 {
 }
 
 .intro-role {
-  max-width: 400px;
+  max-width: 360px;
   color: var(--muted);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
 }
 
 .side-nav {
