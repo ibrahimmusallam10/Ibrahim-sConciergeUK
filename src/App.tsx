@@ -108,6 +108,26 @@ const sections = [
 export default function App() {
   const [activeSection, setActiveSection] = useState(sections[0].id)
 
+  useEffect(() => {
+    const updateCursorGlow = (event: PointerEvent) => {
+      document.documentElement.style.setProperty('--cursor-x', `${event.clientX}px`)
+      document.documentElement.style.setProperty('--cursor-y', `${event.clientY}px`)
+      document.documentElement.style.setProperty('--cursor-glow-opacity', '1')
+    }
+
+    const hideCursorGlow = () => {
+      document.documentElement.style.setProperty('--cursor-glow-opacity', '0')
+    }
+
+    window.addEventListener('pointermove', updateCursorGlow, { passive: true })
+    document.documentElement.addEventListener('mouseleave', hideCursorGlow)
+
+    return () => {
+      window.removeEventListener('pointermove', updateCursorGlow)
+      document.documentElement.removeEventListener('mouseleave', hideCursorGlow)
+    }
+  }, [])
+
   const handleContactSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
