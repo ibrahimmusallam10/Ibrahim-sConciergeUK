@@ -110,8 +110,8 @@ export default function App() {
 
   useEffect(() => {
     const updateCursorGlow = (event: PointerEvent) => {
-      document.documentElement.style.setProperty('--cursor-x', `${event.clientX}px`)
-      document.documentElement.style.setProperty('--cursor-y', `${event.clientY}px`)
+      document.documentElement.style.setProperty('--cursor-x', `${event.pageX}px`)
+      document.documentElement.style.setProperty('--cursor-y', `${event.pageY}px`)
       document.documentElement.style.setProperty('--cursor-glow-opacity', '1')
     }
 
