@@ -151,7 +151,7 @@ export default function App() {
       <aside className="intro" aria-label="Profile introduction">
         <div>
           <h1>Ibrahim Musallam</h1>
-          <h2 className="intro-title">Current Entrepreneur/Problem Solver, Future Business Leader</h2>
+          <h2 className="intro-title">Entrepreneur &amp; Problem Solver</h2>
           <p className="intro-role">
             I build practical business experience through entrepreneurship, luxury retail, mentoring, and fundraising.
           </p>
