@@ -306,7 +306,7 @@ h3 {
 
 .contact-copy {
   grid-column: 1;
-  align-self: start;
+  align-self: center;
 }
 
 .contact-intro h2 {
