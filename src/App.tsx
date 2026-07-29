@@ -202,7 +202,8 @@ export default function App() {
 
       <section className="content">
         <section id="about" className="section-block">
-          <h2>Who Am I</h2>
+          <h2>About Me</h2>
+          <p className="about-statement">Building, Learning, Growing.</p>
           <div className="copy">
             <p>
               Hi, I’m Ibrahim. I’m someone who loves building things, solving problems and constantly learning.

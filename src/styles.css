@@ -224,6 +224,15 @@ h3 {
   font-size: 0.98rem;
 }
 
+.about-statement {
+  margin: -0.25rem 0 1.35rem;
+  color: var(--heading);
+  font-size: clamp(1.45rem, 3vw, 1.9rem);
+  font-weight: 650;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+}
+
 .copy p,
 .resume-item p,
 .feature-item p {
