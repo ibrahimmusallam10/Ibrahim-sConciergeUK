@@ -1,13 +1,16 @@
 :root {
-  --bg: #0f172a;
-  --panel: #112240;
-  --panel-soft: rgba(30, 41, 59, 0.42);
-  --text: #e2e8f0;
-  --heading: #f8fafc;
-  --muted: #94a3b8;
+  --bg: #061123;
+  --panel: #0c1b34;
+  --panel-soft: rgba(18, 35, 61, 0.62);
+  --text: #dbe4f0;
+  --heading: #f7f9fc;
+  --muted: #9cabc1;
   --accent: #5eead4;
   --accent-soft: rgba(94, 234, 212, 0.12);
-  --border: rgba(148, 163, 184, 0.14);
+  --border: rgba(92, 126, 172, 0.26);
+  --cursor-x: 50vw;
+  --cursor-y: 50vh;
+  --cursor-glow-opacity: 0;
 }
 
 * {
@@ -19,8 +22,10 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0;
   min-height: 100vh;
+  zoom: 0.9;
   color: var(--text);
   background: var(--bg);
   font-family: Inter, "Segoe UI", Arial, sans-serif;
@@ -28,11 +33,28 @@ body {
   line-height: 1.6;
 }
 
+body::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    30rem circle at var(--cursor-x) var(--cursor-y),
+    rgba(94, 234, 212, 0.1),
+    transparent 62%
+  );
+  opacity: var(--cursor-glow-opacity);
+  transition: opacity 220ms ease;
+}
+
 a {
   color: inherit;
 }
 
 .site-shell {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: minmax(280px, 0.82fr) minmax(0, 1.18fr);
   gap: clamp(2rem, 7vw, 6rem);
@@ -40,6 +62,12 @@ a {
   min-height: 100vh;
   margin: 0 auto;
   padding: clamp(3rem, 7vw, 5.5rem) 0;
+}
+
+@media (pointer: coarse), (prefers-reduced-motion: reduce) {
+  body::before {
+    display: none;
+  }
 }
 
 .intro {
@@ -117,7 +145,7 @@ h3 {
 
 .side-nav a {
   display: inline-flex;
-  align-items: center;
+  align-items: start;
   gap: 1rem;
   width: fit-content;
   color: var(--muted);
@@ -284,38 +312,50 @@ h3 {
 
 .contact-section {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(300px, 360px);
-  gap: clamp(1.5rem, 4vw, 3rem);
+  grid-template-columns: minmax(350px, 1fr) minmax(250px, 290px);
+  gap: clamp(1.5rem, 2.5vw, 2rem);
   align-items: center;
-  width: calc(100% + 2rem);
-  min-height: 28rem;
-  margin-left: -1rem;
-  padding: clamp(1.75rem, 3.5vw, 2.5rem);
-  background: rgba(17, 34, 64, 0.55);
-  border: 1px solid var(--border);
+  width: calc(100% + 8rem);
+  margin-left: -4rem;
+  padding: clamp(1.75rem, 3vw, 2.25rem);
+  background: #0c1b34;
+  border: 1px solid rgba(67, 103, 151, 0.58);
   border-radius: 1.25rem;
+}
+
+.contact-intro {
+  display: block;
+  grid-column: 1;
+}
+
+.contact-heading {
+  margin-bottom: 1.6rem;
+}
+
+.contact-copy {
+  max-width: 36rem;
 }
 
 .contact-intro h2 {
   margin-bottom: 1rem;
-  font-size: clamp(1.25rem, 2.2vw, 1.7rem);
-  font-weight: 600;
-  letter-spacing: -0.035em;
+  font-size: clamp(1.4rem, 2.2vw, 1.58rem);
+  font-weight: 700;
+  letter-spacing: -0.05em;
   text-transform: none;
   white-space: nowrap;
 }
 
-.contact-intro > p:not(.contact-kicker) {
+.contact-copy > p {
   margin-bottom: 1.5rem;
   color: var(--muted);
 }
 
 .contact-kicker {
   margin: 0 0 0.55rem;
-  color: var(--accent);
-  font-size: 0.72rem;
+  color: #f3c75f;
+  font-size: 0.64rem;
   font-weight: 800;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.23em;
   text-transform: uppercase;
 }
 
@@ -327,7 +367,7 @@ h3 {
 
 .contact-details a {
   color: var(--heading);
-  text-decoration-color: rgba(94, 234, 212, 0.45);
+  text-decoration-color: rgba(244, 199, 107, 0.55);
   text-underline-offset: 0.25rem;
 }
 
@@ -337,14 +377,52 @@ h3 {
 
 .contact-form {
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "name-label"
+    "name-input"
+    "email-label"
+    "email-input"
+    "message-label"
+    "message-input"
+    "action";
+  row-gap: 0.2rem;
+  grid-column: 2;
+  grid-row: 1;
+  align-self: center;
   justify-self: end;
   width: 100%;
-  max-width: 360px;
-  padding: 1.4rem;
-  color: #0f2c2a;
-  background: #f8fafc;
-  border-radius: 1rem;
+  max-width: 300px;
+  padding: 1.3rem;
+  color: var(--text);
+  background: #08162a;
+  border: 1px solid rgba(67, 103, 151, 0.62);
+  border-radius: 0.85rem;
   box-shadow: 0 1.25rem 3rem rgba(2, 6, 23, 0.2);
+}
+
+.contact-form label[for="contact-name"] {
+  grid-area: name-label;
+}
+
+.contact-form #contact-name {
+  grid-area: name-input;
+}
+
+.contact-form label[for="contact-email"] {
+  grid-area: email-label;
+}
+
+.contact-form #contact-email {
+  grid-area: email-input;
+}
+
+.contact-form label[for="contact-message"] {
+  grid-area: message-label;
+}
+
+.contact-form #contact-message {
+  grid-area: message-input;
 }
 
 .contact-form label {
@@ -356,12 +434,12 @@ h3 {
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  margin-bottom: 1.15rem;
-  padding: 0.55rem 0;
-  color: #0f172a;
+  margin-bottom: 0.8rem;
+  padding: 0.4rem 0;
+  color: var(--heading);
   background: transparent;
   border: 0;
-  border-bottom: 1px solid #cbd5e1;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.35);
   border-radius: 0;
   font: inherit;
   outline: none;
@@ -371,25 +449,29 @@ h3 {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #0f766e;
-  box-shadow: 0 1px 0 #0f766e;
+  border-color: var(--accent);
+  box-shadow: 0 1px 0 var(--accent);
 }
 
 .contact-form button {
-  min-height: 2.8rem;
-  padding: 0.7rem 1.1rem;
-  color: #f8fafc;
-  background: #123a36;
+  grid-area: action;
+  justify-self: stretch;
+  width: 100%;
+  min-height: 2.45rem;
+  padding: 0.55rem 0.9rem;
+  color: #08352f;
+  background: linear-gradient(90deg, #32c7a5, #5de0d2);
   border: 0;
   border-radius: 999px;
   font: inherit;
+  font-size: 0.82rem;
   font-weight: 700;
   cursor: pointer;
   transition: background 180ms ease, transform 180ms ease;
 }
 
 .contact-form button:hover {
-  background: #0f766e;
+  background: #99f6e4;
   transform: translateY(-1px);
 }
 
@@ -399,6 +481,10 @@ h3 {
 }
 
 @media (max-width: 920px) {
+  body {
+    zoom: 1;
+  }
+
   .site-shell {
     display: block;
     width: min(760px, calc(100% - 2rem));
@@ -425,7 +511,7 @@ h3 {
   }
 
   .contact-section {
-    grid-template-columns: minmax(0, 0.8fr) minmax(280px, 1.2fr);
+    grid-template-columns: minmax(0, 1fr) minmax(250px, 285px);
     width: 100%;
     margin-left: 0;
   }
@@ -472,13 +558,29 @@ h3 {
     white-space: normal;
   }
 
-  .contact-intro {
-    padding: 0.5rem 0.35rem;
+  .contact-copy {
+    grid-column: 1;
   }
 
   .contact-form {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "name-label"
+      "name-input"
+      "email-label"
+      "email-input"
+      "message-label"
+      "message-input"
+      "action";
+    grid-column: 1;
+    grid-row: auto;
     justify-self: stretch;
     max-width: none;
     padding: 1.25rem;
+  }
+
+  .contact-form button {
+    justify-self: stretch;
+    width: 100%;
   }
 }

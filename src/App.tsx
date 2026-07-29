@@ -108,6 +108,26 @@ const sections = [
 export default function App() {
   const [activeSection, setActiveSection] = useState(sections[0].id)
 
+  useEffect(() => {
+    const updateCursorGlow = (event: PointerEvent) => {
+      document.documentElement.style.setProperty('--cursor-x', `${event.pageX}px`)
+      document.documentElement.style.setProperty('--cursor-y', `${event.pageY}px`)
+      document.documentElement.style.setProperty('--cursor-glow-opacity', '1')
+    }
+
+    const hideCursorGlow = () => {
+      document.documentElement.style.setProperty('--cursor-glow-opacity', '0')
+    }
+
+    window.addEventListener('pointermove', updateCursorGlow, { passive: true })
+    document.documentElement.addEventListener('mouseleave', hideCursorGlow)
+
+    return () => {
+      window.removeEventListener('pointermove', updateCursorGlow)
+      document.documentElement.removeEventListener('mouseleave', hideCursorGlow)
+    }
+  }, [])
+
   const handleContactSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
@@ -151,7 +171,7 @@ export default function App() {
       <aside className="intro" aria-label="Profile introduction">
         <div>
           <h1>Ibrahim Musallam</h1>
-          <h2 className="intro-title">Current Entrepreneur/Problem Solver, Future Business Leader</h2>
+          <h2 className="intro-title">Entrepreneur &amp; Problem Solver</h2>
           <p className="intro-role">
             I build practical business experience through entrepreneurship, luxury retail, mentoring, and fundraising.
           </p>
@@ -294,15 +314,23 @@ export default function App() {
 
         <section id="contact" className="section-block contact-section">
           <div className="contact-intro">
-            <p className="contact-kicker">Get in touch</p>
-            <h2>Build Something Together</h2>
-            <p>
-              The best opportunities often begin with a conversation. If you have an idea, opportunity or challenge
-              worth exploring, let’s discuss what we could build together.
-            </p>
-            <div className="contact-details">
-              <a href="mailto:ibrahimmusallam10@gmail.com">ibrahimmusallam10@gmail.com</a>
-              <span>London, United Kingdom</span>
+            <div className="contact-heading">
+              <p className="contact-kicker">Get in touch</p>
+              <h2>
+                Let’s Build Something
+                <br />
+                Meaningful.
+              </h2>
+            </div>
+            <div className="contact-copy">
+              <p>
+                The best opportunities rarely begin with a contract — they begin with a conversation. If you have an
+                idea, challenge or you simply want to connect, I would love to hear from you.
+              </p>
+              <div className="contact-details">
+                <a href="mailto:ibrahimmusallam10@gmail.com">ibrahimmusallam10@gmail.com</a>
+                <span>London, United Kingdom</span>
+              </div>
             </div>
           </div>
 
@@ -314,9 +342,9 @@ export default function App() {
             <input id="contact-email" name="email" type="email" autoComplete="email" required />
 
             <label htmlFor="contact-message">Message</label>
-            <textarea id="contact-message" name="message" rows={4} required />
+            <textarea id="contact-message" name="message" rows={3} required />
 
-            <button type="submit">Start a Conversation</button>
+            <button type="submit">Let’s Talk</button>
           </form>
         </section>
       </section>
