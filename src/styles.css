@@ -260,9 +260,11 @@ h3 {
 
 .resume-item {
   display: grid;
-  grid-template-columns: 8.8rem 1.4rem minmax(0, 1fr);
-  gap: 1rem;
-  padding: 1.3rem 0 1.8rem;
+  grid-template-columns: 7.7rem 1.15rem 2.65rem minmax(0, 1fr);
+  gap: 0.75rem;
+  padding: 1.15rem 0 1.25rem;
+  border-bottom: 1px solid rgba(92, 126, 172, 0.18);
+  border-radius: 0;
 }
 
 .timeline-marker {
@@ -275,7 +277,7 @@ h3 {
   content: "";
   position: absolute;
   top: 0.72rem;
-  bottom: -1.8rem;
+  bottom: -1.25rem;
   width: 1px;
   background: linear-gradient(var(--border), rgba(92, 126, 172, 0.08));
 }
@@ -302,9 +304,36 @@ h3 {
   box-shadow: 0 0 0 1px var(--accent), 0 0 1rem rgba(94, 234, 212, 0.35);
 }
 
+.experience-icon,
+.initiative-icon {
+  display: grid;
+  place-items: center;
+  color: var(--heading);
+  border: 1px solid var(--border);
+  background: rgba(12, 27, 52, 0.55);
+}
+
+.experience-icon {
+  width: 2.65rem;
+  height: 2.65rem;
+  border-radius: 0.45rem;
+}
+
+.experience-icon svg,
+.initiative-icon svg {
+  width: 1.45rem;
+  height: 1.45rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
 .experience-content h3 {
-  margin-bottom: 1rem;
-  font-size: clamp(1rem, 2vw, 1.18rem);
+  margin: 0.25rem 0 0.55rem;
+  font-size: clamp(0.98rem, 1.8vw, 1.12rem);
+  font-weight: 600;
 }
 
 .organisation {
@@ -329,10 +358,10 @@ h3 {
 
 .date {
   margin: 0 !important;
-  color: var(--heading) !important;
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
+  color: var(--accent) !important;
+  font-size: 0.73rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
@@ -347,7 +376,8 @@ h3 {
 
 .experience-content > p {
   color: var(--text);
-  line-height: 1.8;
+  font-size: 0.86rem;
+  line-height: 1.55;
 }
 
 .tag-list {
@@ -360,15 +390,15 @@ h3 {
 .tag-list span {
   display: inline-flex;
   align-items: center;
-  min-height: 1.85rem;
+  min-height: 1.7rem;
   gap: 0.42rem;
-  padding: 0.38rem 0.72rem;
+  padding: 0.28rem 0.58rem;
   color: var(--accent);
   background: rgba(94, 234, 212, 0.025);
   border: 1px solid rgba(94, 234, 212, 0.5);
-  border-radius: 999px;
-  font-size: 0.74rem;
-  font-weight: 800;
+  border-radius: 0.3rem;
+  font-size: 0.65rem;
+  font-weight: 500;
 }
 
 .resume-item .tag-list svg {
@@ -378,6 +408,76 @@ h3 {
   stroke: currentColor;
   stroke-linecap: round;
   stroke-width: 1.7;
+}
+
+#initiatives {
+  width: calc(100% + 8rem);
+  margin-left: -4rem;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: rgba(6, 17, 35, 0.42);
+}
+
+#initiatives > h2 {
+  margin: 0 0 0.85rem 0.15rem;
+}
+
+.initiatives-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.initiative-card {
+  display: flex;
+  min-height: 12rem;
+  flex-direction: column;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.55rem;
+  background: linear-gradient(135deg, rgba(12, 27, 52, 0.72), rgba(6, 17, 35, 0.38));
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+
+.initiative-card:hover {
+  border-color: rgba(94, 234, 212, 0.45);
+  transform: translateY(-2px);
+}
+
+.initiative-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--accent);
+  border-color: rgba(94, 234, 212, 0.25);
+  border-radius: 0.35rem;
+}
+
+.initiative-card h3 {
+  margin-bottom: 0.55rem;
+  font-weight: 500;
+}
+
+.initiative-card > p {
+  margin-bottom: 0.9rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.initiative-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: auto;
+  color: var(--accent);
+  font-size: 0.7rem;
+}
+
+.initiative-meta time {
+  color: var(--muted);
+  text-align: right;
 }
 
 .contact-section {
@@ -580,6 +680,15 @@ h3 {
     gap: 4.25rem;
   }
 
+  #initiatives {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .initiatives-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .contact-section {
     grid-template-columns: minmax(0, 1fr) minmax(250px, 285px);
     width: 100%;
@@ -602,13 +711,13 @@ h3 {
   }
 
   .resume-item {
-    grid-template-columns: 1rem minmax(0, 1fr);
+    grid-template-columns: 1rem 2.35rem minmax(0, 1fr);
     gap: 0.8rem;
     padding: 1rem 0 1.3rem;
   }
 
   .resume-item .date {
-    grid-column: 2;
+    grid-column: 2 / span 2;
     grid-row: 1;
     margin-bottom: 0.35rem !important;
   }
@@ -618,12 +727,19 @@ h3 {
     grid-row: 1 / span 2;
   }
 
+  .experience-icon {
+    grid-column: 2;
+    grid-row: 2;
+    width: 2.35rem;
+    height: 2.35rem;
+  }
+
   .timeline-marker::after {
     bottom: -1.3rem;
   }
 
   .experience-content {
-    grid-column: 2;
+    grid-column: 3;
     grid-row: 2;
   }
 
@@ -640,6 +756,14 @@ h3 {
 
   .feature-item {
     padding: 0;
+  }
+
+  .initiatives-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .initiative-card {
+    min-height: 0;
   }
 
   .contact-section {
