@@ -263,28 +263,28 @@ export default function App() {
   }
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
+    const updateActiveSection = () => {
+      const readingLine = window.innerHeight * 0.32
+      let currentSection = sections[0].id
 
-        if (visible[0]?.target.id) {
-          setActiveSection(visible[0].target.id)
+      sections.forEach((section) => {
+        const element = document.getElementById(section.id)
+        if (element && element.getBoundingClientRect().top <= readingLine) {
+          currentSection = section.id
         }
-      },
-      {
-        rootMargin: '-18% 0px -55% 0px',
-        threshold: [0.15, 0.35, 0.55]
-      }
-    )
+      })
 
-    sections.forEach((section) => {
-      const element = document.getElementById(section.id)
-      if (element) observer.observe(element)
-    })
+      setActiveSection(currentSection)
+    }
 
-    return () => observer.disconnect()
+    updateActiveSection()
+    window.addEventListener('scroll', updateActiveSection, { passive: true })
+    window.addEventListener('resize', updateActiveSection)
+
+    return () => {
+      window.removeEventListener('scroll', updateActiveSection)
+      window.removeEventListener('resize', updateActiveSection)
+    }
   }, [])
 
   return (
