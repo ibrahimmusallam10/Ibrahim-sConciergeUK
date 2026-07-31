@@ -6,71 +6,107 @@ const experiences = [
     date: '2023 — Present',
     role: 'Founder',
     organisation: "Ibrahim’s Concierge UK",
+    icon: 'briefcase',
     featured: true,
     description:
       'Built a luxury sourcing and concierge business from a £250 investment into a five-figure operation. Manage the full client journey, including sourcing, pricing, negotiation, sales, payments and delivery, while developing long-term relationships with repeat customers.',
     tags: ['£250 → Five Figures', 'Client Relations', 'Sales', 'Business Growth']
   },
   {
-    date: '2025 — Present',
-    role: 'Company Secretary & Human Resources',
-    organisation: 'Young Enterprise',
+    date: 'July 2026',
+    role: 'Work Experience Intern',
+    organisation: 'BroadLab',
+    icon: 'building',
     description:
-      'Coordinate meetings, records, and team communication for a student-run company while contributing to planning, product development, and sales.',
-    tags: ['Operations', 'Teamwork', 'Leadership']
+      'Gained hands-on experience across Operations, Sales, Campaign Management, Product and Engineering in a fast-paced advertising technology company. Attended daily operational meetings, completed a company case study and presented research used to organise international brand data.',
+    tags: ['Cross-Functional Experience', 'CRM Systems', 'Research', 'Presentation Skills']
   },
   {
-    date: '2025 — Present',
-    role: 'Mentee',
-    organisation: 'Macquarie Group',
+    date: '2025 — 2026',
+    role: 'Company Secretary & HR Manager',
+    organisation: 'Young Enterprise',
+    icon: 'people',
     description:
-      'Selected for weekly mentorship focused on financial insight, strategic thinking, and applying professional learning to real-world scenarios.',
-    tags: ['Finance', 'Decision Making', 'Problem Solving']
+      'Helped lead Seeds & Greetings, a sustainable student company producing plantable greeting cards. Coordinated meetings, maintained company records, supported team management and contributed to sales, product development and company operations.',
+    tags: ['National Finalists', '£2,100+ Revenue', 'Leadership', 'Operations']
   },
   {
     date: '2025 — 2026',
     role: 'Student Mentor',
     organisation: 'St Aloysius’ College',
+    icon: 'education',
     description:
-      'Provided academic mentoring to younger students, helping them understand key concepts, build confidence, and develop positive learning habits.',
-    tags: ['Mentoring', 'Communication', 'Leadership']
+      'Mentored a younger student through regular sessions focused on confidence, academic progress and personal development. Adapted my communication and approach to provide practical guidance and create a supportive environment.',
+    tags: ['Mentoring', 'Communication', 'Patience', 'Leadership']
   },
   {
     date: '2025',
     role: 'Independent Fundraising Volunteer',
     organisation: 'Human Appeal',
+    icon: 'heart',
     description:
-      'Raised over £2,000 within four months through independent fundraising initiatives while balancing academic responsibilities.',
-    tags: ['Fundraising', 'Organisation', 'Initiative']
+      'Raised over £2,000 within four months through independently planned fundraising initiatives while balancing school and business commitments. Managed promotion, communication and donor engagement throughout the campaign.',
+    tags: ['£2,000+ Raised', 'Initiative', 'Organisation', 'Community Impact']
   },
   {
     date: '2024',
     role: 'Retail Sales Assistant',
     organisation: 'Kick Game',
+    icon: 'retail',
     description:
-      'Gained retail experience in a fast-paced Covent Garden environment, strengthening customer service, sales, teamwork, and communication skills.',
-    tags: ['Retail Sales', 'Customer Service', 'Communication']
+      'Worked in a fast-paced sneaker and streetwear retailer in Covent Garden, supporting customers throughout the buying process. Developed practical experience in customer service, product knowledge, communication and teamwork.',
+    tags: ['Retail Sales', 'Customer Service', 'Product Knowledge', 'Teamwork']
   }
 ]
 
 const initiatives = [
   {
-    title: "Ibrahim'sConciergeUK",
+    title: '90-Day LinkedIn Challenge',
+    icon: 'linkedin',
     description:
-      'Built and scaled a venture from an initial £250 investment into a five-figure operation, learning sales, pricing strategy, customer behaviour, margins, and reinvesting for growth.',
-    tags: ['Founder', 'Concierge', 'Business Development']
+      'Posted on LinkedIn for 90 days consistently about business, mindset, learning and personal growth.',
+    metric: '90 Days',
+    date: 'Apr – Jul 2026'
   },
   {
-    title: 'Professional Network',
+    title: 'Systems & Websites',
+    icon: 'code',
     description:
-      'Active member across communities including NetworkING UK, Future Leaders UK, Young Professionals, Ellavate, East London Business Alliance, and OuterCircle.',
-    tags: ['Networking', 'Relationship Building', 'Growth']
+      'Designed and created a handful of systems and websites to solve problems, streamline workflows and improve processes.',
+    metric: 'Designer & Developer',
+    date: '2024 – Present'
   },
   {
-    title: 'Public Learning',
+    title: 'Duke of Edinburgh (DofE) Gold',
+    icon: 'mountain',
     description:
-      'Documenting consistency, mindset, and business lessons while growing an audience of 758 followers and 500+ LinkedIn connections.',
-    tags: ['Activity', 'Reflection', 'Personal Brand']
+      'Completed a 3-day expedition in the mountains, demonstrating resilience, teamwork and leadership in challenging conditions.',
+    metric: 'Gold Award',
+    date: 'Completed 2025'
+  },
+  {
+    title: 'Investment Challenge',
+    icon: 'chart',
+    description:
+      'Organised a 1-week investment challenge with 20 people to grow capital and deepen their understanding of markets.',
+    metric: '20 Participants',
+    date: 'Jul 2026'
+  },
+  {
+    title: 'Talk to the Nation',
+    icon: 'microphone',
+    description:
+      'Spoke on Talk to the Nation about our Young Enterprise journey and competed against someone in a general knowledge quiz for social media.',
+    metric: 'Media Appearance',
+    date: '2025'
+  },
+  {
+    title: 'Human Appeal Fundraiser',
+    icon: 'heart',
+    description:
+      'Raised over £2,000 through independently planned fundraising initiatives while balancing school and business commitments.',
+    metric: '£2,000+ Raised',
+    date: 'Jan – Apr 2025'
   }
 ]
 
@@ -106,6 +142,50 @@ function ExperienceTagIcon({ label }: { label: string }) {
       <rect x="3" y="7" width="18" height="13" rx="2" /><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18M10 12v2h4v-2" />
     </svg>
   )
+}
+
+function SectionIcon({ type }: { type: string }) {
+  let drawing
+
+  switch (type) {
+    case 'briefcase':
+      drawing = <><rect x="3" y="7" width="18" height="13" rx="2" /><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18M10 12v2h4v-2" /></>
+      break
+    case 'building':
+      drawing = <><rect x="5" y="3" width="12" height="18" rx="1" /><path d="M9 7h1M13 7h1M9 11h1M13 11h1M9 15h1M13 15h1M17 10h3v11h-3" /></>
+      break
+    case 'people':
+      drawing = <><circle cx="8" cy="8" r="3" /><circle cx="17" cy="7" r="2.5" /><path d="M2 20v-2a5.5 5.5 0 0 1 11 0v2M14 12.5a4.5 4.5 0 0 1 7 3.7V20" /></>
+      break
+    case 'education':
+      drawing = <><path d="m2 9 10-5 10 5-10 5L2 9Z" /><path d="M6 11.5V17c3 2.5 9 2.5 12 0v-5.5M22 9v7" /></>
+      break
+    case 'heart':
+      drawing = <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z" />
+      break
+    case 'retail':
+      drawing = <><path d="M3 15c3 0 4-5 6-8 2 4 4 6 10 7 2 .4 3 2.2 2 4H6c-2 0-3-1-3-3Z" /><path d="M9 11h4M6 18v2h15v-2" /></>
+      break
+    case 'linkedin':
+      drawing = <><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M7 10v7M7 7v.1M11 17v-7M11 13a3 3 0 0 1 6 0v4" /></>
+      break
+    case 'code':
+      drawing = <path d="m8 5-6 7 6 7M16 5l6 7-6 7M14 2l-4 20" />
+      break
+    case 'mountain':
+      drawing = <><path d="m2 20 8-16 4 8 2-4 6 12H2Z" /><path d="m8 8 2 2 2-2M16 12l1.5 1.5L19 12" /></>
+      break
+    case 'chart':
+      drawing = <><path d="M4 20v-6h3v6M10 20V9h3v11M16 20V4h3v16M2 20h20" /></>
+      break
+    case 'microphone':
+      drawing = <><rect x="8" y="2" width="8" height="13" rx="4" /><path d="M5 11a7 7 0 0 0 14 0M12 18v4M8 22h8" /></>
+      break
+    default:
+      drawing = <circle cx="12" cy="12" r="9" />
+  }
+
+  return <svg viewBox="0 0 24 24" aria-hidden="true">{drawing}</svg>
 }
 
 const links = [
@@ -325,6 +405,9 @@ export default function App() {
                 <div className="timeline-marker" aria-hidden="true">
                   <span className="timeline-dot" />
                 </div>
+                <div className="experience-icon">
+                  <SectionIcon type={item.icon} />
+                </div>
                 <div className="experience-content">
                   <h3>
                     {item.role} <span className="title-separator">·</span>{' '}
@@ -344,15 +427,15 @@ export default function App() {
 
         <section id="initiatives" className="section-block">
           <h2>Initiatives</h2>
-          <div className="item-list">
+          <div className="initiatives-grid">
             {initiatives.map((item) => (
-              <article className="feature-item" key={item.title}>
+              <article className="initiative-card" key={item.title}>
+                <div className="initiative-icon"><SectionIcon type={item.icon} /></div>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
-                <div className="tag-list">
-                  {item.tags.map((tag) => (
-                    <span key={tag}>{tag}</span>
-                  ))}
+                <div className="initiative-meta">
+                  <span>{item.metric}</span>
+                  <time>{item.date}</time>
                 </div>
               </article>
             ))}
