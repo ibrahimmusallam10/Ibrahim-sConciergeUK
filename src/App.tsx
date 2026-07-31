@@ -4,42 +4,49 @@ import type { FormEvent } from 'react'
 const experiences = [
   {
     date: '2023 — Present',
-    title: "Founder · Ibrahim'sConciergeUK",
+    role: 'Founder',
+    organisation: "Ibrahim’s Concierge UK",
+    featured: true,
     description:
-      'Lead a bespoke luxury shopping and concierge service focused on sourcing premium designer fashion, rare luxury goods, and exclusive lifestyle items. Responsible for client relationships, business development, pricing, sourcing, and the full service journey from request to delivery.',
-    tags: ['Business Ownership', 'Client Service', 'Luxury Retail', 'Sales']
+      'Built a luxury sourcing and concierge business from a £250 investment into a five-figure operation. Manage the full client journey, including sourcing, pricing, negotiation, sales, payments and delivery, while developing long-term relationships with repeat customers.',
+    tags: ['£250 → Five Figures', 'Client Relations', 'Sales', 'Business Growth']
   },
   {
     date: '2025 — Present',
-    title: 'Company Secretary & Human Resources · Young Enterprise',
+    role: 'Company Secretary & Human Resources',
+    organisation: 'Young Enterprise',
     description:
-      'Support the organisation and administration of a student-run company by coordinating meetings, recording minutes, maintaining clear communication, and contributing to planning, product development, and sales.',
-    tags: ['Administration', 'Teamwork', 'Operations', 'Leadership']
+      'Coordinate meetings, records, and team communication for a student-run company while contributing to planning, product development, and sales.',
+    tags: ['Operations', 'Teamwork', 'Leadership']
   },
   {
     date: '2025 — Present',
-    title: 'Mentee · Macquarie Group',
+    role: 'Mentee',
+    organisation: 'Macquarie Group',
     description:
-      'Selected for mentorship focused on financial insight, professional environments, strategic thinking, and applying learning from weekly sessions to real-world scenarios.',
-    tags: ['Mentoring', 'Finance', 'Decision Making', 'Problem Solving']
+      'Selected for weekly mentorship focused on financial insight, strategic thinking, and applying professional learning to real-world scenarios.',
+    tags: ['Finance', 'Decision Making', 'Problem Solving']
   },
   {
     date: '2025 — 2026',
-    title: "Student Mentor · St Aloysius' College",
+    role: 'Student Mentor',
+    organisation: 'St Aloysius’ College',
     description:
       'Provided academic mentoring to younger students, helping them understand key concepts, build confidence, and develop positive learning habits.',
-    tags: ['Mentoring', 'Communication', 'Patience', 'Leadership']
+    tags: ['Mentoring', 'Communication', 'Leadership']
   },
   {
     date: '2025',
-    title: 'Independent Fundraising Volunteer · Human Appeal',
+    role: 'Independent Fundraising Volunteer',
+    organisation: 'Human Appeal',
     description:
       'Raised over £2,000 within four months through independent fundraising initiatives while balancing academic responsibilities.',
     tags: ['Fundraising', 'Organisation', 'Initiative']
   },
   {
     date: '2024',
-    title: 'Retail Sales Assistant · Kick Game',
+    role: 'Retail Sales Assistant',
+    organisation: 'Kick Game',
     description:
       'Gained retail experience in a fast-paced Covent Garden environment, strengthening customer service, sales, teamwork, and communication skills.',
     tags: ['Retail Sales', 'Customer Service', 'Communication']
@@ -66,6 +73,40 @@ const initiatives = [
     tags: ['Activity', 'Reflection', 'Personal Brand']
   }
 ]
+
+function ExperienceTagIcon({ label }: { label: string }) {
+  const normalized = label.toLowerCase()
+
+  if (/client|team|mentor|communication|leadership/.test(normalized)) {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="9" cy="8" r="3" /><path d="M3.5 19v-2a4.5 4.5 0 0 1 9 0v2M15 5.5a3 3 0 0 1 0 5.5M16 13a4.5 4.5 0 0 1 4.5 4.5V19" />
+      </svg>
+    )
+  }
+
+  if (/sales|finance|fundrais|figures/.test(normalized)) {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 20V10M10 20V5M16 20v-7M22 20H2M3 7l6-4 6 5 6-5" />
+      </svg>
+    )
+  }
+
+  if (/growth|business|initiative|problem/.test(normalized)) {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M14 5c3-2 5-2 7-2 0 2 0 4-2 7l-5 5-5-5 5-5ZM9 10l-4 1-2 3 6 1M14 15l-1 6 3-2 1-4M8 16l-3 3M11 17l-4 4" />
+      </svg>
+    )
+  }
+
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="3" y="7" width="18" height="13" rx="2" /><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18M10 12v2h4v-2" />
+    </svg>
+  )
+}
 
 const links = [
   {
@@ -277,16 +318,22 @@ export default function App() {
 
         <section id="experience" className="section-block">
           <h2>Experience</h2>
-          <div className="item-list">
+          <div className="item-list timeline-list">
             {experiences.map((item) => (
-              <article className="resume-item" key={item.title}>
+              <article className={`resume-item${item.featured ? ' featured' : ''}`} key={`${item.role}-${item.organisation}`}>
                 <p className="date">{item.date}</p>
-                <div>
-                  <h3>{item.title}</h3>
+                <div className="timeline-marker" aria-hidden="true">
+                  <span className="timeline-dot" />
+                </div>
+                <div className="experience-content">
+                  <h3>
+                    {item.role} <span className="title-separator">·</span>{' '}
+                    <span className="organisation">{item.organisation}</span>
+                  </h3>
                   <p>{item.description}</p>
                   <div className="tag-list">
                     {item.tags.map((tag) => (
-                      <span key={tag}>{tag}</span>
+                      <span key={tag}><ExperienceTagIcon label={tag} />{tag}</span>
                     ))}
                   </div>
                 </div>
