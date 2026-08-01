@@ -274,6 +274,12 @@ export default function App() {
         }
       })
 
+      const pageBottom = window.scrollY + window.innerHeight
+      const hasReachedBottom = pageBottom >= document.documentElement.scrollHeight - 8
+      if (hasReachedBottom) {
+        currentSection = sections[sections.length - 1].id
+      }
+
       setActiveSection(currentSection)
     }
 
