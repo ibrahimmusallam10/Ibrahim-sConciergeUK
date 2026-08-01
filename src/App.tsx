@@ -294,7 +294,7 @@ export default function App() {
           <h1>Ibrahim Musallam</h1>
           <h2 className="intro-title">Entrepreneur &amp; Problem Solver</h2>
           <p className="intro-role">
-            I build practical business experience through entrepreneurship, luxury retail, mentoring, and fundraising.
+            I turn ideas into systems, build businesses and create value through entrepreneurship, strategy and meaningful relationships.
           </p>
 
           <nav className="side-nav" aria-label="Page sections">
