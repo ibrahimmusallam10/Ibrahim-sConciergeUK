@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import type { FormEvent } from 'react'
 
-const resumeUrl = new URL('../resume/Ibrahim_Musallam_Resume.pdf', import.meta.url).href
+const resumeUrl = new URL('../resume/Ibrahim_Musallam_CV.pdf', import.meta.url).href
 
 const experiences = [
   {
@@ -65,7 +65,7 @@ const initiatives = [
   {
     title: '90-Day LinkedIn Challenge',
     icon: 'linkedin',
-    href: 'https://www.linkedin.com/in/ibrahim-musallam-44045a381/recent-activity/all/',
+    href: 'https://www.linkedin.com/posts/ibrahimmusallam_day-190-activity-7452632031651549184-lrwL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF43mvABki7iR_iW47X3V-HVFGuPm8wL8yQ',
     description:
       'Posted on LinkedIn for 90 days consistently about business, mindset, learning and personal growth.',
     metric: '90 Days',
