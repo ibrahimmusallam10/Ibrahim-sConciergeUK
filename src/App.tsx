@@ -99,7 +99,7 @@ const initiatives = [
     title: 'Talk to the Nation',
     icon: 'microphone',
     description:
-      'Spoke on Talk to the Nation about our Young Enterprise journey and competed against someone in a general knowledge quiz for social media.',
+      'Featured on Talk to the Nation to discuss our Young Enterprise journey and compete in a social-media general knowledge quiz against a fellow participant.',
     metric: 'Media Appearance',
     date: '2025'
   },
