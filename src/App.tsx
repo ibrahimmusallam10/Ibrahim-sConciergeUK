@@ -458,6 +458,11 @@ export default function App() {
                   ) : item.title}
                 </h3>
                 <p>{item.description}</p>
+                {item.href && (
+                  <a className="initiative-action" href={item.href} target="_blank" rel="noreferrer">
+                    View LinkedIn posts <span aria-hidden="true">↗</span>
+                  </a>
+                )}
                 <div className="initiative-meta">
                   <span>{item.metric}</span>
                   <time>{item.date}</time>
