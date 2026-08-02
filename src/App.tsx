@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import type { FormEvent } from 'react'
 
+const resumeUrl = new URL('../resume/Ibrahim_Musallam_Resume.pdf', import.meta.url).href
+
 const experiences = [
   {
     date: '2023 — Present',
@@ -63,6 +65,7 @@ const initiatives = [
   {
     title: '90-Day LinkedIn Challenge',
     icon: 'linkedin',
+    href: 'https://www.linkedin.com/in/ibrahim-musallam-44045a381/recent-activity/all/',
     description:
       'Posted on LinkedIn for 90 days consistently about business, mindset, learning and personal growth.',
     metric: '90 Days',
@@ -333,6 +336,9 @@ export default function App() {
               {link.icon}
             </a>
           ))}
+          <a className="resume-download" href={resumeUrl} download="Ibrahim_Musallam_CV.pdf">
+            Download CV
+          </a>
         </div>
       </aside>
 
@@ -446,7 +452,11 @@ export default function App() {
             {initiatives.map((item) => (
               <article className="initiative-card" key={item.title}>
                 <div className="initiative-icon"><SectionIcon type={item.icon} /></div>
-                <h3>{item.title}</h3>
+                <h3>
+                  {item.href ? (
+                    <a href={item.href} target="_blank" rel="noreferrer">{item.title}</a>
+                  ) : item.title}
+                </h3>
                 <p>{item.description}</p>
                 <div className="initiative-meta">
                   <span>{item.metric}</span>

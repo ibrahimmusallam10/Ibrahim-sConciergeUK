@@ -198,6 +198,16 @@ h3 {
   height: 1.5rem;
 }
 
+.intro-footer .resume-download {
+  width: auto;
+  padding: 0 0.2rem;
+  color: var(--accent);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 .intro-footer svg {
   width: 1.5rem;
   height: 1.5rem;
@@ -463,6 +473,15 @@ h3 {
 .initiative-card h3 {
   margin-bottom: 0.55rem;
   font-weight: 500;
+}
+
+.initiative-card h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.initiative-card h3 a:hover {
+  color: var(--accent);
 }
 
 .initiative-card > p {
