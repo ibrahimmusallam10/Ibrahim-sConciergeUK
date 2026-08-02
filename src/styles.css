@@ -420,7 +420,7 @@ h3 {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  margin: 1.1rem 0 0 0.75rem;
+  margin: 2rem 0 0.35rem 0.75rem;
   color: var(--heading);
   font-size: 0.86rem;
   font-weight: 700;
