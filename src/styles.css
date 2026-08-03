@@ -833,12 +833,16 @@ h3 {
 }
 
 @media (max-width: 620px) {
+  html {
+    font-size: 12px;
+  }
+
   .site-shell {
     display: grid;
-    grid-template-columns: minmax(8.25rem, 36%) minmax(0, 1fr);
-    gap: 1rem;
-    width: calc(100% - 1rem);
-    padding: 1.25rem 0 2.5rem;
+    grid-template-columns: minmax(8.25rem, 32%) minmax(0, 1fr);
+    gap: 1.25rem;
+    width: calc(100% - 3rem);
+    padding: 2rem 0 3rem;
   }
 
   h1 {
