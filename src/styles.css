@@ -255,7 +255,7 @@ h3 {
 .resume-item,
 .feature-item {
   border-radius: 0.75rem;
-  transition: background 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+  transition: background 180ms ease, box-shadow 180ms ease, transform 180ms ease, opacity 220ms ease;
 }
 
 .resume-item {
@@ -360,6 +360,12 @@ h3 {
 
 .resume-item:hover {
   border-color: rgba(92, 126, 172, 0.3);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .timeline-list:has(.resume-item:hover) .resume-item:not(:hover) {
+    opacity: 0.32;
+  }
 }
 
 .date {
