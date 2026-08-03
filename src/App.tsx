@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import type { FormEvent } from 'react'
 
+const resumeUrl = new URL('../resume/Ibrahim_Musallam_CV.pdf', import.meta.url).href
+
 const experiences = [
   {
     date: '2023 — Present',
@@ -63,6 +65,7 @@ const initiatives = [
   {
     title: '90-Day LinkedIn Challenge',
     icon: 'linkedin',
+    href: 'https://www.linkedin.com/in/ibrahim-musallam-44045a381/recent-activity/all/',
     description:
       'Posted on LinkedIn for 90 days consistently about business, mindset, learning and personal growth.',
     metric: '90 Days',
@@ -96,7 +99,7 @@ const initiatives = [
     title: 'Talk to the Nation',
     icon: 'microphone',
     description:
-      'Spoke on Talk to the Nation about our Young Enterprise journey and competed against someone in a general knowledge quiz for social media.',
+      'Featured on Talk to the Nation to discuss our Young Enterprise journey and compete in a social-media general knowledge quiz against a fellow participant.',
     metric: 'Media Appearance',
     date: '2025'
   },
@@ -438,6 +441,12 @@ export default function App() {
               </article>
             ))}
           </div>
+          <a className="experience-resume-link" href={resumeUrl} target="_blank" rel="noreferrer">
+            View Full CV
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 17 17 7M8 7h9v9" />
+            </svg>
+          </a>
         </section>
 
         <section id="initiatives" className="section-block">
@@ -446,8 +455,17 @@ export default function App() {
             {initiatives.map((item) => (
               <article className="initiative-card" key={item.title}>
                 <div className="initiative-icon"><SectionIcon type={item.icon} /></div>
-                <h3>{item.title}</h3>
+                <h3>
+                  {item.href ? (
+                    <a href={item.href} target="_blank" rel="noreferrer">{item.title}</a>
+                  ) : item.title}
+                </h3>
                 <p>{item.description}</p>
+                {item.href && (
+                  <a className="initiative-action" href={item.href} target="_blank" rel="noreferrer">
+                    View LinkedIn posts <span aria-hidden="true">↗</span>
+                  </a>
+                )}
                 <div className="initiative-meta">
                   <span>{item.metric}</span>
                   <time>{item.date}</time>
