@@ -215,6 +215,14 @@ h3 {
   padding-top: 0.2rem;
 }
 
+.site-credit {
+  max-width: 28rem;
+  margin-top: -1.25rem;
+  color: rgba(156, 171, 193, 0.72);
+  font-size: 0.76rem;
+  line-height: 1.65;
+}
+
 .section-block {
   scroll-margin-top: 5rem;
 }
@@ -869,6 +877,12 @@ h3 {
   .copy {
     font-size: 0.76rem;
     line-height: 1.65;
+  }
+
+  .site-credit {
+    margin-top: -0.75rem;
+    font-size: 0.58rem;
+    line-height: 1.55;
   }
 
   .resume-item {

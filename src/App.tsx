@@ -212,7 +212,7 @@ const links = [
   },
   {
     label: 'Email',
-    href: 'mailto:ibrahimmusallam10@gmail.com',
+    href: 'mailto:hello@ibrahimmusallam.com',
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="M2 5.75A2.75 2.75 0 0 1 4.75 3h14.5A2.75 2.75 0 0 1 22 5.75v12.5A2.75 2.75 0 0 1 19.25 21H4.75A2.75 2.75 0 0 1 2 18.25V5.75Zm2.75-1.25c-.32 0-.61.12-.83.32L12 12.08l8.08-7.26a1.24 1.24 0 0 0-.83-.32H4.75Zm15.75 2.08-5.9 5.31 5.9 5.2V6.58Zm-.94 12.55-6.08-5.36-.65.58a1.25 1.25 0 0 1-1.66 0l-.65-.58-6.08 5.36c.1.02.2.03.31.03h14.5c.11 0 .21-.01.31-.03ZM3.5 17.09l5.9-5.2-5.9-5.31v10.51Z" />
@@ -271,7 +271,7 @@ export default function App() {
     const subject = encodeURIComponent(`Website enquiry from ${name}`)
     const body = encodeURIComponent(`${message}\n\nFrom: ${name}\nEmail: ${email}`)
 
-    window.location.href = `mailto:ibrahimmusallam10@gmail.com?subject=${subject}&body=${body}`
+    window.location.href = `mailto:hello@ibrahimmusallam.com?subject=${subject}&body=${body}`
   }
 
   useEffect(() => {
@@ -491,7 +491,7 @@ export default function App() {
                 idea, challenge or you simply want to connect, I would love to hear from you.
               </p>
               <div className="contact-details">
-                <a href="mailto:ibrahimmusallam10@gmail.com">ibrahimmusallam10@gmail.com</a>
+                <a href="mailto:hello@ibrahimmusallam.com">hello@ibrahimmusallam.com</a>
                 <span>London, United Kingdom</span>
               </div>
             </div>
@@ -510,6 +510,10 @@ export default function App() {
             <button type="submit">Let’s Talk</button>
           </form>
         </section>
+
+        <footer className="site-credit">
+          Loosely designed and built with React and TypeScript, deployed with Vercel.
+        </footer>
       </section>
     </main>
   )
