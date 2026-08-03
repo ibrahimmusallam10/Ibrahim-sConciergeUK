@@ -512,7 +512,7 @@ export default function App() {
         </section>
 
         <footer className="site-credit">
-          Loosely designed and built by yours truly. Coded with{' '}
+          Loosely designed and built with intention by Ibrahim Musallam. Built with{' '}
           <a href="https://react.dev/" target="_blank" rel="noreferrer">React</a> and{' '}
           <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">TypeScript</a>, powered by{' '}
           <a href="https://vite.dev/" target="_blank" rel="noreferrer">Vite</a>, and deployed with{' '}
