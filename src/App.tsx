@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import type { FormEvent } from 'react'
 
 const resumeUrl = new URL('../resume/Ibrahim_Musallam_CV.pdf', import.meta.url).href
+const contactFormAccessKey = 'c9de2413-1c94-4f66-969d-37f478b5a707'
 
 const experiences = [
   {
@@ -240,6 +241,7 @@ const sections = [
 
 export default function App() {
   const [activeSection, setActiveSection] = useState(sections[0].id)
+  const [contactStatus, setContactStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
 
   useEffect(() => {
     const updateCursorGlow = (event: PointerEvent) => {
@@ -261,17 +263,33 @@ export default function App() {
     }
   }, [])
 
-  const handleContactSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleContactSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
+    const formElement = event.currentTarget
+    const formData = new FormData(formElement)
 
-    const form = new FormData(event.currentTarget)
-    const name = String(form.get('name') || '')
-    const email = String(form.get('email') || '')
-    const message = String(form.get('message') || '')
-    const subject = encodeURIComponent(`Website enquiry from ${name}`)
-    const body = encodeURIComponent(`${message}\n\nFrom: ${name}\nEmail: ${email}`)
+    formData.append('access_key', contactFormAccessKey)
+    formData.append('subject', 'New enquiry from ibrahimmusallam.com')
+    formData.append('from_name', 'Ibrahim Musallam Website')
 
-    window.location.href = `mailto:hello@ibrahimmusallam.com?subject=${subject}&body=${body}`
+    setContactStatus('sending')
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      })
+      const result = await response.json()
+
+      if (!response.ok || !result.success) {
+        throw new Error('Contact form submission failed')
+      }
+
+      formElement.reset()
+      setContactStatus('success')
+    } catch {
+      setContactStatus('error')
+    }
   }
 
   useEffect(() => {
@@ -498,6 +516,8 @@ export default function App() {
           </div>
 
           <form className="contact-form" onSubmit={handleContactSubmit}>
+            <input className="contact-botcheck" type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" />
+
             <label htmlFor="contact-name">Name</label>
             <input id="contact-name" name="name" type="text" autoComplete="name" required />
 
@@ -507,7 +527,14 @@ export default function App() {
             <label htmlFor="contact-message">Message</label>
             <textarea id="contact-message" name="message" rows={3} required />
 
-            <button type="submit">Let’s Talk</button>
+            <button type="submit" disabled={contactStatus === 'sending'}>
+              {contactStatus === 'sending' ? 'Sending…' : 'Let’s Talk'}
+            </button>
+
+            <p className={`contact-status ${contactStatus}`} aria-live="polite">
+              {contactStatus === 'success' && 'Thank you — your message has been sent.'}
+              {contactStatus === 'error' && 'Something went wrong. Please email me directly.'}
+            </p>
           </form>
         </section>
 
