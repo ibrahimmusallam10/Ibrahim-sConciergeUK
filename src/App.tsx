@@ -512,7 +512,11 @@ export default function App() {
         </section>
 
         <footer className="site-credit">
-          Loosely designed and built with React and TypeScript, deployed with Vercel.
+          Loosely designed and built by yours truly. Coded with{' '}
+          <a href="https://react.dev/" target="_blank" rel="noreferrer">React</a> and{' '}
+          <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">TypeScript</a>, powered by{' '}
+          <a href="https://vite.dev/" target="_blank" rel="noreferrer">Vite</a>, and deployed with{' '}
+          <a href="https://vercel.com/" target="_blank" rel="noreferrer">Vercel</a>.
         </footer>
       </section>
     </main>

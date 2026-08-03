@@ -223,6 +223,18 @@ h3 {
   line-height: 1.65;
 }
 
+.site-credit a {
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.site-credit a:hover,
+.site-credit a:focus-visible {
+  color: var(--accent);
+}
+
 .section-block {
   scroll-margin-top: 5rem;
 }
