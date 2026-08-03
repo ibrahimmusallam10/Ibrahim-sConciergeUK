@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import type { FormEvent } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 
 const resumeUrl = new URL('../resume/Ibrahim_Musallam_CV.pdf', import.meta.url).href
 const contactFormAccessKey = 'c9de2413-1c94-4f66-969d-37f478b5a707'
@@ -546,6 +547,7 @@ export default function App() {
           <a href="https://vercel.com/" target="_blank" rel="noreferrer">Vercel</a>.
         </footer>
       </section>
+      <Analytics />
     </main>
   )
 }
