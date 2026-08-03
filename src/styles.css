@@ -733,19 +733,36 @@ h3 {
     position: static;
     height: auto;
     min-height: 0;
-    margin-bottom: 4.5rem;
+    margin-bottom: 3.5rem;
   }
 
   .side-nav {
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem 1.2rem;
+    margin-top: 2.25rem;
+  }
+
+  .side-nav a {
+    gap: 0.55rem;
+    font-size: 0.68rem;
+  }
+
+  .side-nav span {
+    width: 1.1rem;
+  }
+
+  .side-nav a:hover span,
+  .side-nav a.active span {
+    width: 1.75rem;
   }
 
   .intro-footer {
-    margin-top: 2rem;
+    margin-top: 1.75rem;
   }
 
   .content {
-    gap: 4.25rem;
+    gap: 3.5rem;
   }
 
   #initiatives {
@@ -766,16 +783,67 @@ h3 {
 
 @media (max-width: 620px) {
   .site-shell {
-    width: min(100% - 1.5rem, 760px);
-    padding-top: 2.25rem;
+    width: min(100% - 2rem, 760px);
+    padding: 1.75rem 0 2.5rem;
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: clamp(1.85rem, 9vw, 2.35rem);
   }
 
   .intro-title {
-    font-size: 1.05rem;
+    font-size: 1rem;
+  }
+
+  .intro-role {
+    max-width: 31rem;
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  .intro {
+    margin-bottom: 3rem;
+  }
+
+  .side-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem 1rem;
+    margin-top: 2rem;
+    padding: 1rem;
+    background: rgba(12, 27, 52, 0.52);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+  }
+
+  .side-nav a {
+    width: 100%;
+    font-size: 0.62rem;
+  }
+
+  .side-nav a.active {
+    color: var(--accent);
+  }
+
+  .side-nav a.active span {
+    background: var(--accent);
+  }
+
+  .intro-footer {
+    margin-top: 1.5rem;
+  }
+
+  .content {
+    gap: 3.25rem;
+  }
+
+  .section-block {
+    scroll-margin-top: 1.25rem;
+  }
+
+  .copy {
+    font-size: 0.92rem;
+    line-height: 1.7;
   }
 
   .resume-item {
